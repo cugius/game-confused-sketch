@@ -9,6 +9,7 @@ final class GameViewController: UIViewController, WKNavigationDelegate {
         let configuration = WKWebViewConfiguration()
         configuration.ignoresViewportScaleLimits = false
         configuration.websiteDataStore = .default()
+        configuration.userContentController.add(HapticsBridge(), name: "haptics")
         webView = WKWebView(frame: .zero, configuration: configuration)
         webView.navigationDelegate = self
         webView.isMultipleTouchEnabled = true
