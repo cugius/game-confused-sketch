@@ -65,7 +65,7 @@ Già presenti nel gioco (non le riproporrei): specializzazioni, evoluzioni, alle
 
 Ordine per impatto/sforzo:
 
-1. **Chiamata anticipata dell'ondata**: "Inizia" prima del timer, con ricompensa in grafite (es. 10% di quella non spesa). Classico TD, poche righe di codice.
+1. ~~**Chiamata anticipata dell'ondata**~~ *(corretto)*: la fase di preparazione non ha timer, l'ondata parte solo con "Inizia", quindi non c'è attesa da accorciare. Resta valida solo come scommessa ("senza acquisti, +8 grafite"), a basso impatto.
 2. **Priorità di bersaglio per torre** (Primo / Più forte / Più vicino / Più debole). *Nota dal codice*: la logica `t.priority === 'strong'` esiste già nel motore di tiro, ma nessuna interfaccia la imposta: è codice morto. Serve solo il selettore nel pannello della torre.
 3. **Stelle per ondata** (1–3, in base a quanta scintilla resta intatta e a quanti pezzi di grafite si spendono): dà un motivo per rigiocare il quaderno.
 4. **Numeri di danno e ricompense**: "−13" sul nemico, "+8✎" alla cancellazione. Nel codice non ho trovato testo fluttuante, quindi il giocatore non vede quanto danno fa.
