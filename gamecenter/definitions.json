@@ -1,0 +1,744 @@
+{
+  "prefix": "cs.",
+  "achievements": [
+    {
+      "id": "cs.first_wave",
+      "group": "Progresso",
+      "points": 10,
+      "goal": 1,
+      "names": {
+        "it": "Primo assalto",
+        "en": "First assault",
+        "es": "Primer asalto",
+        "fr": "Premier assaut",
+        "de": "Erster Angriff",
+        "ja": "最初の襲撃"
+      },
+      "descriptions": {
+        "it": "Supera la prima ondata.",
+        "en": "Clear the first wave.",
+        "es": "Supera la primera oleada.",
+        "fr": "Termine la première vague.",
+        "de": "Schließe die erste Welle ab.",
+        "ja": "最初のウェーブをクリアする。"
+      }
+    },
+    {
+      "id": "cs.waves25",
+      "group": "Progresso",
+      "points": 15,
+      "goal": 25,
+      "names": {
+        "it": "Quaderno in corso",
+        "en": "Notebook in progress",
+        "es": "Cuaderno en curso",
+        "fr": "Cahier en cours",
+        "de": "Heft in Arbeit",
+        "ja": "ノート進行中"
+      },
+      "descriptions": {
+        "it": "Supera 25 ondate in tutto.",
+        "en": "Clear 25 waves in total.",
+        "es": "Supera 25 oleadas en total.",
+        "fr": "Termine 25 vagues au total.",
+        "de": "Schließe insgesamt 25 Wellen ab.",
+        "ja": "合計 25 ウェーブをクリアする。"
+      }
+    },
+    {
+      "id": "cs.waves100",
+      "group": "Progresso",
+      "points": 25,
+      "goal": 100,
+      "names": {
+        "it": "Quaderno pieno",
+        "en": "Full notebook",
+        "es": "Cuaderno lleno",
+        "fr": "Cahier plein",
+        "de": "Volles Heft",
+        "ja": "ノートがいっぱい"
+      },
+      "descriptions": {
+        "it": "Supera 100 ondate in tutto.",
+        "en": "Clear 100 waves in total.",
+        "es": "Supera 100 oleadas en total.",
+        "fr": "Termine 100 vagues au total.",
+        "de": "Schließe insgesamt 100 Wellen ab.",
+        "ja": "合計 100 ウェーブをクリアする。"
+      }
+    },
+    {
+      "id": "cs.win",
+      "group": "Progresso",
+      "points": 40,
+      "goal": 1,
+      "names": {
+        "it": "Ultimo tratto",
+        "en": "Last stroke",
+        "es": "Último trazo",
+        "fr": "Dernier trait",
+        "de": "Letzter Strich",
+        "ja": "最後の一筆"
+      },
+      "descriptions": {
+        "it": "Completa gli otto assalti del quaderno.",
+        "en": "Complete the notebook’s eight assaults.",
+        "es": "Completa los ocho asaltos del cuaderno.",
+        "fr": "Termine les huit assauts du cahier.",
+        "de": "Schließe die acht Angriffe des Hefts ab.",
+        "ja": "ノートの 8 つの襲撃をすべてクリアする。"
+      }
+    },
+    {
+      "id": "cs.win5",
+      "group": "Progresso",
+      "points": 25,
+      "goal": 5,
+      "names": {
+        "it": "Mano sicura",
+        "en": "Sure hand",
+        "es": "Mano segura",
+        "fr": "Main assurée",
+        "de": "Sichere Hand",
+        "ja": "確かな手"
+      },
+      "descriptions": {
+        "it": "Completa il quaderno 5 volte.",
+        "en": "Complete the notebook 5 times.",
+        "es": "Completa el cuaderno 5 veces.",
+        "fr": "Termine le cahier 5 fois.",
+        "de": "Schließe das Heft 5 Mal ab.",
+        "ja": "ノートを 5 回クリアする。"
+      }
+    },
+    {
+      "id": "cs.stars12",
+      "group": "Progresso",
+      "points": 20,
+      "goal": 12,
+      "names": {
+        "it": "Mezza strada",
+        "en": "Halfway",
+        "es": "A mitad de camino",
+        "fr": "À mi-chemin",
+        "de": "Halbzeit",
+        "ja": "折り返し地点"
+      },
+      "descriptions": {
+        "it": "Ottieni 12 stelle nel quaderno.",
+        "en": "Earn 12 stars in the notebook.",
+        "es": "Consigue 12 estrellas en el cuaderno.",
+        "fr": "Obtiens 12 étoiles dans le cahier.",
+        "de": "Sammle 12 Sterne im Heft.",
+        "ja": "ノートで星を 12 個集める。"
+      }
+    },
+    {
+      "id": "cs.stars24",
+      "group": "Progresso",
+      "points": 50,
+      "goal": 24,
+      "names": {
+        "it": "Tre stelle ovunque",
+        "en": "Three stars everywhere",
+        "es": "Tres estrellas en todas partes",
+        "fr": "Trois étoiles partout",
+        "de": "Überall drei Sterne",
+        "ja": "どこでも星 3 つ"
+      },
+      "descriptions": {
+        "it": "Ottieni tutte le 24 stelle del quaderno.",
+        "en": "Earn all 24 stars in the notebook.",
+        "es": "Consigue las 24 estrellas del cuaderno.",
+        "fr": "Obtiens les 24 étoiles du cahier.",
+        "de": "Sammle alle 24 Sterne im Heft.",
+        "ja": "ノートの星 24 個をすべて集める。"
+      }
+    },
+    {
+      "id": "cs.circle",
+      "group": "Costruzione",
+      "points": 10,
+      "goal": 1,
+      "names": {
+        "it": "Primo cerchio",
+        "en": "First circle",
+        "es": "Primer círculo",
+        "fr": "Premier cercle",
+        "de": "Erster Kreis",
+        "ja": "最初の円"
+      },
+      "descriptions": {
+        "it": "Disegna una difesa esterna.",
+        "en": "Draw an outer defense.",
+        "es": "Dibuja una defensa exterior.",
+        "fr": "Dessine une défense extérieure.",
+        "de": "Zeichne eine äußere Verteidigung.",
+        "ja": "外側の防衛を描く。"
+      }
+    },
+    {
+      "id": "cs.architect",
+      "group": "Costruzione",
+      "points": 20,
+      "goal": 1,
+      "names": {
+        "it": "Architetto",
+        "en": "Architect",
+        "es": "Arquitecta",
+        "fr": "Architecte",
+        "de": "Architektin",
+        "ja": "建築家"
+      },
+      "descriptions": {
+        "it": "Proteggi tre cerchi concentrici.",
+        "en": "Protect three concentric circles.",
+        "es": "Protege tres círculos concéntricos.",
+        "fr": "Protège trois cercles concentriques.",
+        "de": "Schütze drei konzentrische Kreise.",
+        "ja": "同心円を 3 つ守る。"
+      }
+    },
+    {
+      "id": "cs.variety",
+      "group": "Costruzione",
+      "points": 20,
+      "goal": 1,
+      "names": {
+        "it": "Cinque segni",
+        "en": "Five marks",
+        "es": "Cinco trazos",
+        "fr": "Cinq traits",
+        "de": "Fünf Zeichen",
+        "ja": "5 つの印"
+      },
+      "descriptions": {
+        "it": "Usa tutte e cinque le difese nella stessa partita.",
+        "en": "Use all five defenses in the same game.",
+        "es": "Usa las cinco defensas en la misma partida.",
+        "fr": "Utilise les cinq défenses dans la même partie.",
+        "de": "Nutze alle fünf Verteidigungen im selben Spiel.",
+        "ja": "同じゲームで 5 種類すべての防衛を使う。"
+      }
+    },
+    {
+      "id": "cs.builder50",
+      "group": "Costruzione",
+      "points": 15,
+      "goal": 50,
+      "names": {
+        "it": "Tavolo da disegno",
+        "en": "Drawing board",
+        "es": "Mesa de dibujo",
+        "fr": "Table à dessin",
+        "de": "Zeichentisch",
+        "ja": "製図台"
+      },
+      "descriptions": {
+        "it": "Costruisci 50 difese.",
+        "en": "Build 50 defenses.",
+        "es": "Construye 50 defensas.",
+        "fr": "Construis 50 défenses.",
+        "de": "Baue 50 Verteidigungen.",
+        "ja": "防衛を 50 個建てる。"
+      }
+    },
+    {
+      "id": "cs.upgrade25",
+      "group": "Costruzione",
+      "points": 15,
+      "goal": 25,
+      "names": {
+        "it": "Mano ferma",
+        "en": "Steady hand",
+        "es": "Pulso firme",
+        "fr": "Main sûre",
+        "de": "Ruhige Hand",
+        "ja": "安定した手"
+      },
+      "descriptions": {
+        "it": "Potenzia le difese 25 volte.",
+        "en": "Upgrade defenses 25 times.",
+        "es": "Mejora las defensas 25 veces.",
+        "fr": "Améliore les défenses 25 fois.",
+        "de": "Verbessere Verteidigungen 25 Mal.",
+        "ja": "防衛を 25 回強化する。"
+      }
+    },
+    {
+      "id": "cs.spec1",
+      "group": "Costruzione",
+      "points": 15,
+      "goal": 1,
+      "names": {
+        "it": "Un tratto tutto tuo",
+        "en": "A stroke all your own",
+        "es": "Un trazo solo tuyo",
+        "fr": "Un trait rien qu’à toi",
+        "de": "Ein Strich ganz für dich",
+        "ja": "自分だけの一筆"
+      },
+      "descriptions": {
+        "it": "Completa una specializzazione.",
+        "en": "Complete a specialization.",
+        "es": "Completa una especialización.",
+        "fr": "Termine une spécialisation.",
+        "de": "Schließe eine Spezialisierung ab.",
+        "ja": "特化を 1 つ完成させる。"
+      }
+    },
+    {
+      "id": "cs.kills100",
+      "group": "Combattimento",
+      "points": 10,
+      "goal": 100,
+      "names": {
+        "it": "Prime gomme",
+        "en": "First erasers",
+        "es": "Primeras gomas",
+        "fr": "Premières gommes",
+        "de": "Erste Radierer",
+        "ja": "最初の消しゴム"
+      },
+      "descriptions": {
+        "it": "Ferma 100 gomme.",
+        "en": "Stop 100 erasers.",
+        "es": "Detén 100 gomas.",
+        "fr": "Arrête 100 gommes.",
+        "de": "Stoppe 100 Radierer.",
+        "ja": "消しゴムを 100 個止める。"
+      }
+    },
+    {
+      "id": "cs.kills1000",
+      "group": "Combattimento",
+      "points": 25,
+      "goal": 1000,
+      "names": {
+        "it": "Mille gomme",
+        "en": "A thousand erasers",
+        "es": "Mil gomas",
+        "fr": "Mille gommes",
+        "de": "Tausend Radierer",
+        "ja": "千個の消しゴム"
+      },
+      "descriptions": {
+        "it": "Ferma 1000 gomme.",
+        "en": "Stop 1000 erasers.",
+        "es": "Detén 1000 gomas.",
+        "fr": "Arrête 1000 gommes.",
+        "de": "Stoppe 1000 Radierer.",
+        "ja": "消しゴムを 1000 個止める。"
+      }
+    },
+    {
+      "id": "cs.kills5000",
+      "group": "Combattimento",
+      "points": 40,
+      "goal": 5000,
+      "names": {
+        "it": "Esercito di briciole",
+        "en": "Army of crumbs",
+        "es": "Ejército de migas",
+        "fr": "Armée de miettes",
+        "de": "Krümelarmee",
+        "ja": "かけらの軍団"
+      },
+      "descriptions": {
+        "it": "Ferma 5000 gomme.",
+        "en": "Stop 5000 erasers.",
+        "es": "Detén 5000 gomas.",
+        "fr": "Arrête 5000 gommes.",
+        "de": "Stoppe 5000 Radierer.",
+        "ja": "消しゴムを 5000 個止める。"
+      }
+    },
+    {
+      "id": "cs.boss",
+      "group": "Combattimento",
+      "points": 25,
+      "goal": 1,
+      "names": {
+        "it": "La gomma si ferma",
+        "en": "The eraser stops",
+        "es": "La goma se detiene",
+        "fr": "La gomme s’arrête",
+        "de": "Der Radierer hält an",
+        "ja": "消しゴムが止まる"
+      },
+      "descriptions": {
+        "it": "Sconfiggi una Cancellatrice.",
+        "en": "Defeat an Eraser Queen.",
+        "es": "Derrota a una Reina Borradora.",
+        "fr": "Bats une Reine Gomme.",
+        "de": "Besiege eine Radierkönigin.",
+        "ja": "消しゴムの女王を倒す。"
+      }
+    },
+    {
+      "id": "cs.boss10",
+      "group": "Combattimento",
+      "points": 30,
+      "goal": 10,
+      "names": {
+        "it": "Cacciatrice di boss",
+        "en": "Boss hunter",
+        "es": "Cazajefes",
+        "fr": "Chasseuse de boss",
+        "de": "Bossjägerin",
+        "ja": "ボスハンター"
+      },
+      "descriptions": {
+        "it": "Sconfiggi 10 boss.",
+        "en": "Defeat 10 bosses.",
+        "es": "Derrota a 10 jefes.",
+        "fr": "Bats 10 boss.",
+        "de": "Besiege 10 Bosse.",
+        "ja": "ボスを 10 体倒す。"
+      }
+    },
+    {
+      "id": "cs.perfect",
+      "group": "Combattimento",
+      "points": 20,
+      "goal": 1,
+      "names": {
+        "it": "Senza una sbavatura",
+        "en": "Not a smudge",
+        "es": "Sin una mancha",
+        "fr": "Sans une bavure",
+        "de": "Ohne einen Fleck",
+        "ja": "しみひとつなく"
+      },
+      "descriptions": {
+        "it": "Completa un’ondata senza danni alla scintilla.",
+        "en": "Clear a wave without damaging the spark.",
+        "es": "Completa una oleada sin dañar la chispa.",
+        "fr": "Termine une vague sans abîmer l’étincelle.",
+        "de": "Schließe eine Welle ab, ohne den Funken zu beschädigen.",
+        "ja": "火花にダメージを受けずに 1 ウェーブをクリアする。"
+      }
+    },
+    {
+      "id": "cs.perfect10",
+      "group": "Combattimento",
+      "points": 30,
+      "goal": 10,
+      "names": {
+        "it": "Foglio immacolato",
+        "en": "Spotless sheet",
+        "es": "Hoja inmaculada",
+        "fr": "Feuille immaculée",
+        "de": "Makelloses Blatt",
+        "ja": "まっさらなシート"
+      },
+      "descriptions": {
+        "it": "Completa 10 ondate senza danni alla scintilla.",
+        "en": "Clear 10 waves without damaging the spark.",
+        "es": "Completa 10 oleadas sin dañar la chispa.",
+        "fr": "Termine 10 vagues sans abîmer l’étincelle.",
+        "de": "Schließe 10 Wellen ab, ohne den Funken zu beschädigen.",
+        "ja": "火花にダメージを受けずに 10 ウェーブをクリアする。"
+      }
+    },
+    {
+      "id": "cs.wave12",
+      "group": "Combattimento",
+      "points": 30,
+      "goal": 12,
+      "names": {
+        "it": "Oltre il quaderno",
+        "en": "Beyond the notebook",
+        "es": "Más allá del cuaderno",
+        "fr": "Au-delà du cahier",
+        "de": "Über das Heft hinaus",
+        "ja": "ノートの向こうへ"
+      },
+      "descriptions": {
+        "it": "Supera l’ondata 12.",
+        "en": "Clear wave 12.",
+        "es": "Supera la oleada 12.",
+        "fr": "Termine la vague 12.",
+        "de": "Schließe Welle 12 ab.",
+        "ja": "ウェーブ 12 をクリアする。"
+      }
+    },
+    {
+      "id": "cs.wave20",
+      "group": "Combattimento",
+      "points": 50,
+      "goal": 20,
+      "names": {
+        "it": "Senza fine",
+        "en": "Without end",
+        "es": "Sin fin",
+        "fr": "Sans fin",
+        "de": "Ohne Ende",
+        "ja": "終わりなき戦い"
+      },
+      "descriptions": {
+        "it": "Supera l’ondata 20.",
+        "en": "Clear wave 20.",
+        "es": "Supera la oleada 20.",
+        "fr": "Termine la vague 20.",
+        "de": "Schließe Welle 20 ab.",
+        "ja": "ウェーブ 20 をクリアする。"
+      }
+    },
+    {
+      "id": "cs.research10",
+      "group": "Laboratorio",
+      "points": 15,
+      "goal": 10,
+      "names": {
+        "it": "Banco affollato",
+        "en": "Busy bench",
+        "es": "Banco concurrido",
+        "fr": "Établi bien occupé",
+        "de": "Volle Werkbank",
+        "ja": "忙しい作業台"
+      },
+      "descriptions": {
+        "it": "Completa 10 ricerche.",
+        "en": "Complete 10 research projects.",
+        "es": "Completa 10 investigaciones.",
+        "fr": "Termine 10 recherches.",
+        "de": "Schließe 10 Forschungen ab.",
+        "ja": "研究を 10 回完了する。"
+      }
+    },
+    {
+      "id": "cs.heal10",
+      "group": "Laboratorio",
+      "points": 15,
+      "goal": 10,
+      "names": {
+        "it": "Mano di ripasso",
+        "en": "Retracing hand",
+        "es": "Mano de repaso",
+        "fr": "Main de repassage",
+        "de": "Nachzeichner-Hand",
+        "ja": "なぞりの手"
+      },
+      "descriptions": {
+        "it": "Ripara le difese 10 volte.",
+        "en": "Repair defenses 10 times.",
+        "es": "Repara las defensas 10 veces.",
+        "fr": "Répare les défenses 10 fois.",
+        "de": "Repariere Verteidigungen 10 Mal.",
+        "ja": "防衛を 10 回修理する。"
+      }
+    },
+    {
+      "id": "cs.healall",
+      "group": "Laboratorio",
+      "points": 10,
+      "goal": 1,
+      "names": {
+        "it": "Cura tutto",
+        "en": "Heal all",
+        "es": "Curar todo",
+        "fr": "Tout soigner",
+        "de": "Alles heilen",
+        "ja": "すべて治療"
+      },
+      "descriptions": {
+        "it": "Usa Cura tutto.",
+        "en": "Use Heal all.",
+        "es": "Usa Curar todo.",
+        "fr": "Utilise Tout soigner.",
+        "de": "Nutze Alles heilen.",
+        "ja": "「すべて治療」を使う。"
+      }
+    },
+    {
+      "id": "cs.power1",
+      "group": "Laboratorio",
+      "points": 10,
+      "goal": 1,
+      "names": {
+        "it": "Primo potere",
+        "en": "First power",
+        "es": "Primer poder",
+        "fr": "Premier pouvoir",
+        "de": "Erste Kraft",
+        "ja": "最初のパワー"
+      },
+      "descriptions": {
+        "it": "Usa un potere durante un assalto.",
+        "en": "Use a power during an assault.",
+        "es": "Usa un poder durante un asalto.",
+        "fr": "Utilise un pouvoir pendant un assaut.",
+        "de": "Nutze eine Kraft während eines Angriffs.",
+        "ja": "襲撃中にパワーを使う。"
+      }
+    },
+    {
+      "id": "cs.power25",
+      "group": "Laboratorio",
+      "points": 20,
+      "goal": 25,
+      "names": {
+        "it": "Maestra dei poteri",
+        "en": "Master of powers",
+        "es": "Maestra de poderes",
+        "fr": "Maîtresse des pouvoirs",
+        "de": "Meisterin der Kräfte",
+        "ja": "パワーの達人"
+      },
+      "descriptions": {
+        "it": "Usa i poteri 25 volte.",
+        "en": "Use powers 25 times.",
+        "es": "Usa los poderes 25 veces.",
+        "fr": "Utilise les pouvoirs 25 fois.",
+        "de": "Nutze Kräfte 25 Mal.",
+        "ja": "パワーを 25 回使う。"
+      }
+    },
+    {
+      "id": "cs.daily1",
+      "group": "Modalità",
+      "points": 15,
+      "goal": 1,
+      "names": {
+        "it": "Sfida accettata",
+        "en": "Challenge accepted",
+        "es": "Reto aceptado",
+        "fr": "Défi relevé",
+        "de": "Herausforderung angenommen",
+        "ja": "挑戦受諾"
+      },
+      "descriptions": {
+        "it": "Gioca la Sfida del giorno.",
+        "en": "Play the Daily Challenge.",
+        "es": "Juega el Reto diario.",
+        "fr": "Joue le Défi du jour.",
+        "de": "Spiele die Tagesherausforderung.",
+        "ja": "デイリーチャレンジを遊ぶ。"
+      }
+    },
+    {
+      "id": "cs.daily7",
+      "group": "Modalità",
+      "points": 30,
+      "goal": 7,
+      "names": {
+        "it": "Abitudine",
+        "en": "Habit",
+        "es": "Costumbre",
+        "fr": "Habitude",
+        "de": "Gewohnheit",
+        "ja": "習慣"
+      },
+      "descriptions": {
+        "it": "Gioca la Sfida del giorno in 7 giorni diversi.",
+        "en": "Play the Daily Challenge on 7 different days.",
+        "es": "Juega el Reto diario en 7 días distintos.",
+        "fr": "Joue le Défi du jour sur 7 jours différents.",
+        "de": "Spiele die Tagesherausforderung an 7 verschiedenen Tagen.",
+        "ja": "デイリーチャレンジを 7 日違う日に遊ぶ。"
+      }
+    },
+    {
+      "id": "cs.eraser1",
+      "group": "Modalità",
+      "points": 30,
+      "goal": 1,
+      "names": {
+        "it": "Dall’altra parte",
+        "en": "The other side",
+        "es": "Del otro lado",
+        "fr": "De l’autre côté",
+        "de": "Die andere Seite",
+        "ja": "反対側から"
+      },
+      "descriptions": {
+        "it": "Vinci una partita in modalità Gomma.",
+        "en": "Win a game in Eraser mode.",
+        "es": "Gana una partida en modo Goma.",
+        "fr": "Gagne une partie en mode Gomme.",
+        "de": "Gewinne ein Spiel im Radierer-Modus.",
+        "ja": "消しゴムモードで勝利する。"
+      }
+    },
+    {
+      "id": "cs.score3000",
+      "group": "Modalità",
+      "points": 20,
+      "goal": 3000,
+      "names": {
+        "it": "Tremila punti",
+        "en": "Three thousand points",
+        "es": "Tres mil puntos",
+        "fr": "Trois mille points",
+        "de": "Dreitausend Punkte",
+        "ja": "3000 ポイント"
+      },
+      "descriptions": {
+        "it": "Raggiungi 3000 punti in una partita.",
+        "en": "Reach 3000 points in one game.",
+        "es": "Alcanza 3000 puntos en una partida.",
+        "fr": "Atteins 3000 points en une partie.",
+        "de": "Erreiche 3000 Punkte in einem Spiel.",
+        "ja": "1 回のゲームで 3000 ポイントに到達する。"
+      }
+    },
+    {
+      "id": "cs.score10000",
+      "group": "Modalità",
+      "points": 40,
+      "goal": 10000,
+      "names": {
+        "it": "Diecimila punti",
+        "en": "Ten thousand points",
+        "es": "Diez mil puntos",
+        "fr": "Dix mille points",
+        "de": "Zehntausend Punkte",
+        "ja": "1 万ポイント"
+      },
+      "descriptions": {
+        "it": "Raggiungi 10000 punti in una partita.",
+        "en": "Reach 10000 points in one game.",
+        "es": "Alcanza 10000 puntos en una partida.",
+        "fr": "Atteins 10000 points en une partie.",
+        "de": "Erreiche 10000 Punkte in einem Spiel.",
+        "ja": "1 回のゲームで 10000 ポイントに到達する。"
+      }
+    }
+  ],
+  "leaderboards": [
+    {
+      "id": "cs.best_score",
+      "names": {
+        "it": "Punteggio migliore",
+        "en": "Best score",
+        "es": "Mejor puntuación",
+        "fr": "Meilleur score",
+        "de": "Highscore",
+        "ja": "ベストスコア"
+      }
+    },
+    {
+      "id": "cs.best_wave",
+      "names": {
+        "it": "Ondata più alta",
+        "en": "Highest wave",
+        "es": "Oleada más alta",
+        "fr": "Vague la plus haute",
+        "de": "Höchste Welle",
+        "ja": "最高ウェーブ"
+      }
+    },
+    {
+      "id": "cs.total_stars",
+      "names": {
+        "it": "Stelle del quaderno",
+        "en": "Notebook stars",
+        "es": "Estrellas del cuaderno",
+        "fr": "Étoiles du cahier",
+        "de": "Heftsterne",
+        "ja": "ノートの星"
+      }
+    }
+  ]
+}

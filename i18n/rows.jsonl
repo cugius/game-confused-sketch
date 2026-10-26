@@ -383,7 +383,7 @@
 ["Ripara le difese {0} volte.","Repair defenses {0} times.","Repara las defensas {0} veces.","Répare les défenses {0} fois.","Repariere Verteidigungen {0} Mal.","防衛を {0} 回修理する。"]
 ["Ripara tutti i cerchi e riduce del {0}% i danni per {1} secondi.","Repairs every circle and cuts damage by {0}% for {1} seconds.","Repara todos los círculos y reduce el daño un {0}% durante {1} segundos.","Répare tous les cercles et réduit les dégâts de {0}% pendant {1} secondes.","Repariert alle Kreise und senkt den Schaden {1} Sekunden lang um {0}%.","すべての円を修理し、{1} 秒間ダメージを {0}% 減らす。"]
 ["Riparazioni +{0}% e scintilla +{1}.","Repairs +{0}% and spark +{1}.","Reparaciones +{0}% y chispa +{1}.","Réparations +{0}% et étincelle +{1}.","Reparaturen +{0}% und Funke +{1}.","修理 +{0}%、火花 +{1}。"]
-["Ripassa","Retrace","Repasar","Repasser","Nachzeichnen","なぞる"]
+["Ripassa","Retrace","Repasar","Repasser","Pausen","なぞる"]
 ["Ripassa le brecce e proteggi la scintilla al centro.","Retrace the breaches and protect the spark at the center.","Repasa las brechas y protege la chispa del centro.","Repasse les brèches et protège l’étincelle au centre.","Zeichne die Breschen nach und schütze den Funken in der Mitte.","突破口をなぞり、中央の火花を守ろう。"]
 ["Ripassa tutti i cerchi","Retrace all circles","Repasar todos los círculos","Repasser tous les cercles","Alle Kreise nachzeichnen","すべての円をなぞる"]
 ["Ripassare costa il {0}% in più.","Retracing costs {0}% more.","Repasar cuesta un {0}% más.","Repasser coûte {0}% de plus.","Nachzeichnen kostet {0}% mehr.","なぞるコストが {0}% 増える。"]
@@ -624,3 +624,4 @@
 ["Disegna un giro completo attorno alla scintilla.", "Draw a full loop around the spark.", "Dibuja una vuelta completa alrededor de la chispa.", "Dessine un tour complet autour de l’étincelle.", "Zeichne eine volle Runde um den Funken.", "火花のまわりを1周ぐるっと描こう。"]
 ["Il contorno è già solido", "The outline is already solid", "El contorno ya es sólido", "Le contour est déjà solide", "Die Kontur ist schon fest", "輪郭はすでに頑丈です"]
 ["Salvataggio incompleto", "Incomplete save", "Guardado incompleto", "Sauvegarde incomplète", "Unvollständiger Spielstand", "セーブデータが不完全です"]
+["Lab", "Lab", "Lab", "Labo", "Labor", "ラボ"]
