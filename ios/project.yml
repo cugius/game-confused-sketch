@@ -24,5 +24,9 @@ targets:
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
         TARGETED_DEVICE_FAMILY: "1,2"
         CODE_SIGN_STYLE: Automatic
+    entitlements:
+      path: ConfusedSketch/ConfusedSketch.entitlements
+      properties:
+        com.apple.developer.game-center: true
     scheme:
       gatherCoverageData: false

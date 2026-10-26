@@ -3,6 +3,7 @@ import WebKit
 
 final class GameViewController: UIViewController, WKNavigationDelegate {
     private var webView: WKWebView!
+    private var gameCenter: GameCenterBridge!
     override var prefersStatusBarHidden: Bool { true }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -10,8 +11,11 @@ final class GameViewController: UIViewController, WKNavigationDelegate {
         configuration.ignoresViewportScaleLimits = false
         configuration.websiteDataStore = .default()
         configuration.userContentController.add(HapticsBridge(), name: "haptics")
+        gameCenter = GameCenterBridge()
+        configuration.userContentController.add(gameCenter, name: "gameCenter")
         webView = WKWebView(frame: .zero, configuration: configuration)
         webView.navigationDelegate = self
+        gameCenter.webView = webView
         webView.isMultipleTouchEnabled = true
         webView.isOpaque = false
         webView.backgroundColor = UIColor(red: 1, green: 0.988, blue: 0.961, alpha: 1)
