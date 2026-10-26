@@ -1,0 +1,33 @@
+name: iOS Simulator
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  simulator:
+    runs-on: macos-15
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Synchronize offline game
+        run: python3 scripts/sync-ios.py
+      - name: Install XcodeGen
+        run: brew list xcodegen >/dev/null 2>&1 || brew install xcodegen
+      - name: Generate Xcode project
+        run: xcodegen generate --spec ios/project.yml
+      - name: Build simulator app
+        run: >-
+          xcodebuild -project ios/ConfusedSketch.xcodeproj
+          -scheme ConfusedSketch -configuration Debug
+          -sdk iphonesimulator -destination 'generic/platform=iOS Simulator'
+          -derivedDataPath build CODE_SIGNING_ALLOWED=NO build
+      - name: Package simulator app
+        run: ditto -c -k --sequesterRsrc --keepParent build/Build/Products/Debug-iphonesimulator/ConfusedSketch.app ConfusedSketch-Simulator.zip
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ConfusedSketch-Simulator
+          path: ConfusedSketch-Simulator.zip
+          retention-days: 14
