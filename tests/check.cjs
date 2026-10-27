@@ -84,3 +84,6 @@ console.log('PASS: radial action bar (buttons by state, upgrade, aim, heal, heal
 
 test(`startGame('campaign','grid');settingsTab='audio';settingsMenu(true);let g=$('dialog').innerHTML;assert(g.includes('role="tablist"')&&g.includes('Effetti sonori')&&!g.includes('Ricentra il foglio'),'audio tab only shows audio');settingsTab='game';settingsMenu(true);g=$('dialog').innerHTML;assert(g.includes('Ricentra il foglio')&&!g.includes('Effetti sonori'),'game tab');settingsTab='access';settingsMenu(true);g=$('dialog').innerHTML;assert(g.includes('Contrasto alto')&&g.includes('languageMenu'),'access tab has language, motion, contrast');settingsTab='info';settingsMenu(true);assert($('dialog').innerHTML.includes('confirmReset'),'info tab');settingsTab='audio';`);
 console.log('PASS: settings tabs (one theme per tab)');
+
+test(`startGame('campaign','grid');showMenu(true);guide();goHome();assert(panelCurrent.name==='intro'&&panelHistory.length<=1,'home from a nested panel');assert(readSavedRun(),'run saved when leaving for home');assert(String($('dialog').innerHTML).includes('Riprendi il foglio salvato'),'home offers resume');restoreRun();assert(started&&!over,'resume works after home');showMenu(true);assert($('dialog').innerHTML.includes('goHome()'),'home button in panels');`);
+console.log('PASS: home button (from any panel, saves, resume)');
