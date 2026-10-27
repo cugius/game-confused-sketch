@@ -572,7 +572,7 @@ function rubPat(){if(RUBP!==null)return RUBP||null;try{if(typeof document==='und
  g.lineCap='round';for(let k=0;k<34;k++){let x=r()*96,y=r()*96,a=r()*Math.PI,l=3+r()*8;g.strokeStyle=r()<.5?'rgba(255,255,255,.32)':'rgba(50,25,35,.26)';g.lineWidth=.6+r()*.5;g.beginPath();g.moveTo(x,y);g.quadraticCurveTo(x+Math.cos(a)*l*.5+2,y+Math.sin(a)*l*.5-2,x+Math.cos(a)*l,y+Math.sin(a)*l);g.stroke()}
  RUBP=ctx.createPattern(c,'repeat')||false}catch(e){RUBP=false}return RUBP||null}
 function rubOn(a){let p=rubPat();if(!p)return;ctx.save();ctx.globalAlpha*=a;ctx.fillStyle=p;ctx.fill();ctx.restore()}
-function slab(R2,L,D,T,sl,sr,dt,cm,ce,seam,hurt){let c=Math.min(3.2,D*.22),plan=(x0,x1,dh)=>[[x0+c,-dh],[seam,-dh],[x1-c,-dh],[x1,-dh+c],[x1,dh-c],[x1-c,dh],[seam,dh],[x0+c,dh],[x0,dh-c],[x0,-dh+c]],B=plan(-L/2,L/2,D/2),Tp=plan(-L/2+sl,L/2-sr,D/2*dt),N=B.length,ts=[0,.4,.54,1],lay=ts.map(t=>B.map((p,k)=>{let q=R2(p[0]+(Tp[k][0]-p[0])*t,p[1]+(Tp[k][1]-p[1])*t);return[q[0],q[1]-T*t]})),bot=B.map(p=>R2(p[0],p[1]));
+function slab(R2,L,D,T,sl,sr,dt,cm,ce,seam,hurt){let c=Math.min(5,D*.3),plan=(x0,x1,dh)=>[[x0+c,-dh],[seam,-dh],[x1-c,-dh],[x1,-dh+c],[x1,dh-c],[x1-c,dh],[seam,dh],[x0+c,dh],[x0,dh-c],[x0,-dh+c]],B=plan(-L/2,L/2,D/2),Tp=plan(-L/2+sl,L/2-sr,D/2*dt),N=B.length,ts=[0,.4,.54,1],lay=ts.map(t=>B.map((p,k)=>{let q=R2(p[0]+(Tp[k][0]-p[0])*t,p[1]+(Tp[k][1]-p[1])*t);return[q[0],q[1]-T*t]})),bot=B.map(p=>R2(p[0],p[1]));
  let faces=[];for(let k=0;k<N;k++){let a=bot[k],b=bot[(k+1)%N],dx=b[0]-a[0],dy=b[1]-a[1],l=Math.hypot(dx,dy)||1,nx=dy/l,ny=-dx/l;if(ny>-.15)faces.push({k,nx,ny})}faces.sort((p,q)=>p.ny-q.ny);
  shadowUnion([[bot,T]],0,0,.2);ctx.lineJoin='round';ctx.lineWidth=1.2;ctx.strokeStyle=SLAB_EDGE;
  for(let f of faces){let k=f.k,k2=(k+1)%N,um=(B[k][0]+B[k2][0])/2,leftEnd=k>=7,lit=leftEnd?.16:0;for(let i=0;i<3;i++){let q=[lay[i][k],lay[i][k2],lay[i+1][k2],lay[i+1][k]];ctx.beginPath();q.forEach((p,n)=>n?ctx.lineTo(p[0],p[1]):ctx.moveTo(p[0],p[1]));ctx.closePath();let base=i===1?SLAB_MID:(um>seam?ce:cm);ctx.fillStyle=shade(base,.8-.3*f.nx+lit+(i===2?.05:0));ctx.fill();rubOn(.95);ctx.stroke()}
@@ -615,11 +615,11 @@ function drawEraser3D(e,x,y,w,h,ang){let ty=e.type,col=hex2(EPAL[ty]||ENEMIES[ty
   cap(-far*hx,1);ctx.restore();return}
  if(ty==='splitter'){let rr=Math.max(6,w*.52),Hh=h*.72,ph=e.wobble||0;for(let [dx,dy,sc,pp] of [[-.55,-.3,.72,1.7],[.62,-.2,.64,3.1],[0,.2,1,0]])blob(x+dx*rr,y+dy*rr*.8,rr*sc,Hh*sc,col,ph+pp,{f,hurt,eyes:sc===1,hop:2,matte:true,rub:true});return}
  let T,L,D,sl,sr,dt,seam,cm=col,ce=mixInk(col,'#ffffff',.07),extra=null,eyeV;SLAB_MID=ty==='boss'?'#ecdcb8':mixInk(col,'#fff6ec',.1);SLAB_EDGE=mixInk(col,'#2a2030',.68);
- if(ty==='fast'){L=w*1.9;D=h*.5;T=12;sl=L*.34;sr=L*.05;dt=.8;seam=L*.2;eyeV=D*.1}
- else if(ty==='armored'){L=w*1.12;D=h*.95;T=19;sl=L*.12;sr=L*.05;dt=.88;seam=L*.22;extra='plate';eyeV=D*.3}
- else if(ty==='boss'){L=w*1.08;D=h*.95;T=28;sl=L*.2;sr=L*.06;dt=.8;seam=L*.2;extra='crown';eyeV=D*.3}
+ if(ty==='fast'){L=w*3.5;D=h*.42;T=8;sl=L*.2;sr=L*.05;dt=.88;seam=L*.2;eyeV=D*.1}
+ else if(ty==='armored'){L=w*1.7;D=h*.98;T=12;sl=L*.1;sr=L*.05;dt=.92;seam=L*.22;extra='plate';eyeV=D*.3}
+ else if(ty==='boss'){L=w*1.06;D=h*.98;T=17;sl=L*.14;sr=L*.06;dt=.9;seam=L*.2;extra='crown';eyeV=D*.3}
  else if(ty==='mini'){L=w*1.5;D=h*.9;T=8;sl=L*.2;sr=L*.05;dt=.85;seam=L*.2;eyeV=D*.12}
- else{L=w*1.2;D=h*.9;T=15;sl=L*.22;sr=L*.05;dt=.82;seam=L*.2;eyeV=D*.3}
+ else{L=w*1.8;D=h*.95;T=11;sl=L*.18;sr=L*.05;dt=.9;seam=L*.2;eyeV=D*.3}
  ctx.save();ctx.translate(x,y);let tx0=-L/2+sl,tx1=L/2-sr,cxt=(tx0+tx1)/2,tsx=(tx1-tx0)/L,Q=(u,v)=>R2(cxt+u*tsx,v*dt),fillp=(a,c2)=>{ctx.beginPath();a.map(p=>Q(p[0],p[1])).forEach((p,k)=>k?ctx.lineTo(p[0],p[1]-T):ctx.moveTo(p[0],p[1]-T));ctx.closePath();ctx.fillStyle=c2;ctx.fill()};
  slab(R2,L,D,T,sl,sr,dt,cm,ce,seam,hurt);
  if(extra==='plate'){let pl=[[-L*.2,-D*.5],[L*.2,-D*.5],[L*.2,D*.5],[-L*.2,D*.5]];fillp(pl,'#aeb4ba');{let qa=Q(-L*.3,-D*.3),qb=Q(L*.3,D*.12),gm=ctx.createLinearGradient(qa[0],qa[1]-T,qb[0],qb[1]-T);gm.addColorStop(0,'rgba(255,255,255,.75)');gm.addColorStop(.35,'rgba(255,255,255,0)');gm.addColorStop(.6,'rgba(40,36,30,.22)');gm.addColorStop(.8,'rgba(255,255,255,.35)');gm.addColorStop(1,'rgba(40,36,30,.3)');ctx.beginPath();pl.map(p=>Q(p[0],p[1])).forEach((p,k)=>k?ctx.lineTo(p[0],p[1]-T):ctx.moveTo(p[0],p[1]-T));ctx.closePath();ctx.fillStyle=gm;ctx.fill();rubOn(.7)}ctx.strokeStyle='#4a4650';ctx.lineWidth=1.2;ctx.beginPath();pl.map(p=>Q(p[0],p[1])).forEach((p,k)=>k?ctx.lineTo(p[0],p[1]-T):ctx.moveTo(p[0],p[1]-T));ctx.closePath();ctx.stroke();ctx.fillStyle='#eef3f6';for(let [u,v] of [[-.14,-.38],[.14,-.38],[-.14,.38],[.14,.38]]){let q=Q(u*L,v*D);ctx.beginPath();ctx.arc(q[0],q[1]-T,1.2,0,TAU);ctx.fill()}}
