@@ -2,7 +2,7 @@
 
 Dalla v0.46 la modalità **Gomma** («attacca tu», `gameMode==='erasers'`) non compare più nella home. **Il codice è ancora tutto nel gioco** (`startReverse`, `ALLIES`, `attackShop`, `updateReverse`, `reverseGuide`, `useReverseRage`…): è stato rimosso solo il pulsante.
 
-Versione completa con la home originale: tag git **`eraser-mode-v0.45`** (commit `db26848`, branch `claude/webgl-fx`). Per tornare a quella versione: `git checkout eraser-mode-v0.45 -- dist/index.html` (poi rifare `node tools/build-i18n.cjs` e `python3 scripts/sync-ios.py`).
+Versione completa con la home originale: commit **`db26848`** (branch `claude/webgl-fx`; il tag locale `eraser-mode-v0.45` non è stato pubblicato). Per tornare a quella versione: `git checkout db26848 -- dist/index.html` (poi rifare `node tools/build-i18n.cjs` e `python3 scripts/sync-ios.py`).
 
 ## Rimetterla nella home
 In `intro()` aggiungere un pulsante nella barra `ibar`:
