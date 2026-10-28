@@ -1,10 +1,10 @@
 #!/usr/bin/env node
-// Inserisce i18n/rows.jsonl in dist/index.html tra /*I18N-BEGIN*/ e /*I18N-END*/.
+// Inserisce assets/i18n/rows.jsonl in dist/index.html tra /*I18N-BEGIN*/ e /*I18N-END*/.
 // Ogni riga: [italiano (chiave), en, es, fr, de, ja]. I segnaposto {n} devono coincidere in tutte le lingue.
-// Uso: node tools/build-i18n.cjs [--check]   (--check non scrive: fallisce se il file non è aggiornato)
+// Uso: node scripts/build-i18n.cjs [--check]   (--check non scrive: fallisce se il file non è aggiornato)
 const fs = require('fs'), path = require('path');
 const root = path.resolve(__dirname, '..');
-const rowsPath = path.join(root, 'i18n/rows.jsonl'), htmlPath = path.join(root, 'dist/index.html');
+const rowsPath = path.join(root, 'assets/i18n/rows.jsonl'), htmlPath = path.join(root, 'dist/index.html');
 const rows = fs.readFileSync(rowsPath, 'utf8').split('\n').filter(l => l.trim()).map((l, i) => {
   try { return JSON.parse(l) } catch (e) { throw new Error('riga ' + (i + 1) + ': JSON non valido') }
 });
@@ -26,7 +26,7 @@ const m = html.match(/\/\*I18N-BEGIN\*\/[\s\S]*?\/\*I18N-END\*\//);
 if (!m) { console.error('Marcatori I18N-BEGIN/END non trovati in dist/index.html'); process.exit(1) }
 const out = html.replace(m[0], () => block);
 if (process.argv.includes('--check')) {
-  if (out !== html) { console.error('dist/index.html non è aggiornato: esegui node tools/build-i18n.cjs'); process.exit(1) }
+  if (out !== html) { console.error('dist/index.html non è aggiornato: esegui node scripts/build-i18n.cjs'); process.exit(1) }
   console.log('PASS: traduzioni aggiornate (' + rows.length + ' righe)');
 } else {
   fs.writeFileSync(htmlPath, out);

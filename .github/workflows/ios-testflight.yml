@@ -19,7 +19,33 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  appstore-access:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    environment: testflight
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Check access to the Apple app before using macOS minutes
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+          ASC_KEY_P8_BASE64: ${{ secrets.ASC_KEY_P8_BASE64 }}
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+        run: |
+          for name in ASC_KEY_ID ASC_ISSUER_ID ASC_KEY_P8_BASE64 APPLE_TEAM_ID; do
+            if [ -z "${!name}" ]; then echo "::error::Missing secret $name"; exit 1; fi
+          done
+          umask 077
+          export ASC_KEY_PATH="$RUNNER_TEMP/appstore-preflight.p8"
+          trap 'rm -f "$ASC_KEY_PATH"' EXIT
+          printf '%s' "$ASC_KEY_P8_BASE64" | base64 --decode > "$ASC_KEY_PATH"
+          ruby scripts/check-appstore.rb
+
   testflight:
+    needs: appstore-access
     runs-on: macos-15
     timeout-minutes: 45
     environment: testflight
@@ -87,6 +113,12 @@ jobs:
           mkdir -p "$RUNNER_TEMP/asc"
           printf '%s' "$ASC_KEY_P8_BASE64" | base64 --decode > "$RUNNER_TEMP/asc/AuthKey_${ASC_KEY_ID}.p8"
           echo "ASC_KEY_PATH=$RUNNER_TEMP/asc/AuthKey_${ASC_KEY_ID}.p8" >> "$GITHUB_ENV"
+
+      - name: Verify App Store Connect app access
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+        run: ruby scripts/check-appstore.rb
 
       # The archive is built without signing on purpose: an automatically signed archive asks for an iOS Development
       # profile, which needs at least one registered device ("Your team has no devices..."). The export step below

@@ -1,28 +1,12 @@
 # Wrapper iOS — Confused Sketch
 
-Bundle ID proposto: `com.confusedbyme.sketch`. Deployment target: iOS 16. Nome visibile: Confused Sketch. Nessun server, pubblicità, tracciamento, accesso fotocamera o microfono.
+Bundle ID: `com.confusedbyme.sketch`. iOS 16+, iPhone e iPad. UIKit + WKWebView: il gioco è copiato da `dist/index.html` a `ios/Web/index.html` durante la build e resta offline.
 
-## Senza installare Xcode sul proprio computer
+- [Pubblicazione TestFlight e secret richiesti](TESTFLIGHT.md).
+- `project.yml`: specifica XcodeGen; progetto Xcode e cartella Web vengono generati, non mantenuti a mano.
+- `ConfusedSketch/`: sorgenti nativi, Game Center, feedback aptico, privacy manifest e icona.
+- La pipeline Simulator non produce build TestFlight.
 
-A ogni push su main GitHub Actions esegue **Game checks** e **iOS Simulator**. La seconda produce un archivio `.app` per simulatore macOS, non installabile sul telefono. Il file HTML resta giocabile da Safari.
+Il progetto usa firma automatica con App Store Connect API durante l'export. La scheda app Apple deve già esistere con il Bundle ID esatto e la chiave deve potervi accedere.
 
-## Apertura su Mac / firma
-
-1. Installa Xcode e XcodeGen (`brew install xcodegen`).
-2. Dalla radice esegui `python3 scripts/sync-ios.py`.
-3. Esegui `xcodegen generate --spec ios/project.yml` e apri `ios/ConfusedSketch.xcodeproj`.
-4. In Signing & Capabilities seleziona il tuo Team Apple. Conferma il Bundle ID: deve corrispondere all’App ID e all’app App Store Connect.
-5. Per un iPhone collegato scegli il dispositivo e Run. Per TestFlight: Generic iOS Device → Product → Archive → Distribute App → App Store Connect.
-
-La firma/il caricamento non sono configurati con credenziali nel repository. Per una futura pipeline TestFlight serviranno Team ID, App ID definitivo e una strategia di firma (certificato/profilo o firma automatica autorizzata), oltre alla chiave App Store Connect. Non inserire chiavi o certificati nei sorgenti.
-
-## Comportamento nativo
-
-- `WKWebView` carica `Web/index.html` dal bundle, con accesso limitato alla cartella Web.
-- Dati persistenti WebKit sul dispositivo; il passaggio Safari → app non importa automaticamente i salvataggi.
-- Nessuna navigazione remota, nessun SDK aggiuntivo.
-- Zoom nativo disattivato; gesture JavaScript del canvas ancora disponibili.
-- Uscire dall’app invia l’evento di pausa/salvataggio al gioco.
-- Icona geometrica provvisoria inclusa, da sostituire se si approva un’identità definitiva.
-
-La compilazione nativa viene verificata dai runner macOS: l’ambiente di sviluppo Linux non esegue Xcode.
+Per verificare le risorse: `python3 scripts/sync-ios.py` e `python3 scripts/check-ios.py` dalla radice.

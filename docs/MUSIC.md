@@ -1,7 +1,7 @@
 # Musica e suoni
 
 ## Musica
-Sette brani in `audio/`, incorporati in base64 in `dist/index.html` (`<script id="music-data">`) con `node tools/embed-music.cjs` (`--check` verifica l'allineamento; non modificare il blocco a mano). Sono stati generati con Gemini (prompt in `docs/prompt musiche gemini.md`) e tagliati dai file originali da ~60 s.
+Sette brani in `assets/audio/`, incorporati in base64 in `dist/index.html` (`<script id="music-data">`) con `node scripts/embed-music.cjs` (`--check` verifica l'allineamento; non modificare il blocco a mano). Sono stati generati con Gemini (prompt in `docs/prompt musiche gemini.md`) e tagliati dai file originali da ~60 s.
 
 | File | Durata | Origine (taglio dall'originale) | Momento |
 |---|---|---|---|

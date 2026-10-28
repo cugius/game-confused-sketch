@@ -2,10 +2,10 @@ Confused Sketch — avvisi di terze parti / third-party notices
 
 1. Carattere / Font: Patrick Hand
    Copyright (c) 2010-2012 Patrick Wagesreiter (mail@patrickwagesreiter.at)
-   Licenza / License: SIL Open Font License 1.1 — testo completo in fonts/PatrickHand-OFL.txt e nella pagina Crediti del gioco.
-   Incorporato in dist/index.html come sottoinsieme latino (fonts/PatrickHand-latin.woff). Nessun nome riservato modificato.
+   Licenza / License: SIL Open Font License 1.1 — testo completo in assets/fonts/PatrickHand-OFL.txt e nella pagina Crediti del gioco.
+   Incorporato in dist/index.html come sottoinsieme latino (assets/fonts/PatrickHand-latin.woff). Nessun nome riservato modificato.
 
-2. Musiche / Music (audio/*.mp3)
+2. Musiche / Music (assets/audio/*.mp3)
    Brani strumentali generati con intelligenza artificiale (Google Gemini) su indicazioni dell'autore e rifiniti
    (loudnorm, tagli, dissolvenze). Instrumental tracks generated with AI (Google Gemini) from the author's prompts,
    then trimmed and normalized. Nessun campione o opera di terzi dichiarati dallo strumento.

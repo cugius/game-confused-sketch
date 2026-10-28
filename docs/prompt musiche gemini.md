@@ -4,7 +4,7 @@
 
 **Come usarli.** Un prompt per messaggio, in una chat nuova per ogni brano (Gemini genera un solo brano per richiesta). Se un brano esce più lungo o con uno stacco in mezzo va bene lo stesso: si taglia e si rifà la giunzione del loop. Per un suono unitario si può aggiungere a ogni prompt: «same sonic palette as a cohesive game soundtrack: pizzicato strings, felt piano, xylophone, wood blocks, brushed snare, no synths».
 
-Nome file consigliato → momento in cui suona (il lettore è `MUSIC` in `dist/index.html`, vedi `docs/MUSIC.md`: basta mettere i file in `audio/` con questi nomi e lanciare `node tools/embed-music.cjs`).
+Nome file consigliato → momento in cui suona (il lettore è `MUSIC` in `dist/index.html`, vedi `docs/MUSIC.md`: basta mettere i file in `assets/audio/` con questi nomi e lanciare `node scripts/embed-music.cjs`).
 
 | File | Momento |
 |---|---|

@@ -1,12 +1,12 @@
 # Traguardi e classifiche Game Center
 
-Generato da `node tools/gc-definitions.cjs` — non modificare a mano.
+Generato da `node scripts/gc-definitions.cjs` — non modificare a mano.
 
 - Prefisso identificatori: `cs.`
 - Traguardi: 44 · punti totali 945 (massimo Apple: 1000, 100 per traguardo)
 - Lingue: it, en, es, fr, de, ja
 
-Da creare in App Store Connect → Game Center prima della pubblicazione: ogni ID sotto, con punti e localizzazioni da `gamecenter/definitions.json`.
+Da creare in App Store Connect → Game Center prima della pubblicazione: ogni ID sotto, con punti e localizzazioni da `assets/gamecenter/definitions.json`.
 
 ## Progresso
 
