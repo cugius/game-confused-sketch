@@ -56,6 +56,12 @@ final class GameViewController: UIViewController, WKNavigationDelegate {
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         guard let url = navigationAction.request.url else { decisionHandler(.cancel); return }
         // This app runs bundled content only; it never fetches a remote game.
+        // The only external link is the privacy policy, opened in the system browser.
+        if navigationAction.navigationType == .linkActivated, url.scheme == "https", url.host == "confusedbyme.com", url.path.hasPrefix("/confused-sketch") {
+            UIApplication.shared.open(url)
+            decisionHandler(.cancel)
+            return
+        }
         decisionHandler(url.isFileURL || url.absoluteString == "about:blank" ? .allow : .cancel)
     }
     @objc private func pauseGame() {
