@@ -797,7 +797,7 @@
       "id": "cs.path4",
       "group": "Percorsi",
       "points": 15,
-      "goal": 4,
+      "goal": 10,
       "names": {
         "it": "Metà dei sentieri",
         "en": "Half the paths",
@@ -807,19 +807,19 @@
         "ja": "コースの半分"
       },
       "descriptions": {
-        "it": "Completa 4 mappe dei Percorsi.",
-        "en": "Complete 4 Paths maps.",
-        "es": "Completa 4 mapas de Recorridos.",
-        "fr": "Termine 4 cartes des Parcours.",
-        "de": "Schließe 4 Pfade-Karten ab.",
-        "ja": "コースのマップを4つクリアする。"
+        "it": "Completa 10 mappe dei Percorsi.",
+        "en": "Complete 10 Paths maps.",
+        "es": "Completa 10 mapas de Recorridos.",
+        "fr": "Termine 10 cartes des Parcours.",
+        "de": "Schließe 10 Pfade-Karten ab.",
+        "ja": "コースのマップを10つクリアする。"
       }
     },
     {
       "id": "cs.pathall",
       "group": "Percorsi",
       "points": 30,
-      "goal": 8,
+      "goal": 20,
       "names": {
         "it": "Tutti i sentieri",
         "en": "Every path",
@@ -829,19 +829,19 @@
         "ja": "すべてのコース"
       },
       "descriptions": {
-        "it": "Completa tutte le 8 mappe dei Percorsi.",
-        "en": "Complete all 8 Paths maps.",
-        "es": "Completa los 8 mapas de Recorridos.",
-        "fr": "Termine les 8 cartes des Parcours.",
-        "de": "Schließe alle 8 Pfade-Karten ab.",
-        "ja": "コースの全8マップをクリアする。"
+        "it": "Completa tutte le 20 mappe dei Percorsi.",
+        "en": "Complete all 20 Paths maps.",
+        "es": "Completa los 20 mapas de Recorridos.",
+        "fr": "Termine les 20 cartes des Parcours.",
+        "de": "Schließe alle 20 Pfade-Karten ab.",
+        "ja": "コースの全20マップをクリアする。"
       }
     },
     {
       "id": "cs.pathstars12",
       "group": "Percorsi",
       "points": 15,
-      "goal": 12,
+      "goal": 30,
       "names": {
         "it": "Stelle sul sentiero",
         "en": "Stars on the path",
@@ -851,19 +851,19 @@
         "ja": "コースの星"
       },
       "descriptions": {
-        "it": "Ottieni 12 stelle nei Percorsi.",
-        "en": "Earn 12 stars in Paths.",
-        "es": "Consigue 12 estrellas en Recorridos.",
-        "fr": "Obtiens 12 étoiles dans les Parcours.",
-        "de": "Erhalte 12 Sterne in Pfade.",
-        "ja": "コースで星を12個獲得する。"
+        "it": "Ottieni 30 stelle nei Percorsi.",
+        "en": "Earn 30 stars in Paths.",
+        "es": "Consigue 30 estrellas en Recorridos.",
+        "fr": "Obtiens 30 étoiles dans les Parcours.",
+        "de": "Erhalte 30 Sterne in Pfade.",
+        "ja": "コースで星を30個獲得する。"
       }
     },
     {
       "id": "cs.pathstars24",
       "group": "Percorsi",
       "points": 30,
-      "goal": 24,
+      "goal": 60,
       "names": {
         "it": "Sentieri a tre stelle",
         "en": "Three-star paths",
@@ -873,12 +873,12 @@
         "ja": "3つ星のコース"
       },
       "descriptions": {
-        "it": "Ottieni tutte le 24 stelle dei Percorsi.",
-        "en": "Earn all 24 stars in Paths.",
-        "es": "Consigue las 24 estrellas de Recorridos.",
-        "fr": "Obtiens les 24 étoiles des Parcours.",
-        "de": "Erhalte alle 24 Sterne in Pfade.",
-        "ja": "コースの星を24個すべて獲得する。"
+        "it": "Ottieni tutte le 60 stelle dei Percorsi.",
+        "en": "Earn all 60 stars in Paths.",
+        "es": "Consigue las 60 estrellas de Recorridos.",
+        "fr": "Obtiens les 60 étoiles des Parcours.",
+        "de": "Erhalte alle 60 Sterne in Pfade.",
+        "ja": "コースの星を60個すべて獲得する。"
       }
     },
     {

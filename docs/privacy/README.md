@@ -1,6 +1,6 @@
 # Informativa privacy — Confused Sketch
 
-`site/confused-sketch.html` è l'unico testo canonico (inglese e italiano nella stessa pagina, selettore lingua; `?lang=it` apre l'italiano). Stessa struttura e stesso editore della pagina di Confused Droplet.
+`site/confused-sketch.html` è l'unico testo canonico (sei lingue nella stessa pagina: it, en, es, fr, de, ja; selettore lingua, `?lang=xx` la imposta; senza parametro segue la lingua del browser. Il link in Crediti passa la lingua del gioco). Stessa struttura e stesso editore della pagina di Confused Droplet.
 
 - URL previsto (da inserire in App Store Connect): https://confusedbyme.com/confused-sketch.html
 - Va caricata nella cartella pubblica del sito (Hostinger) insieme a `confused-droplet.html` e `index.html` dello studio. **Da fare:** aggiungere Sketch all'elenco giochi in `index.html` dello studio.

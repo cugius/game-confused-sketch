@@ -73,10 +73,10 @@ Da creare in App Store Connect → Game Center prima della pubblicazione: ogni I
 | ID | Nome | Obiettivo | Punti |
 |---|---|---|---|
 | `cs.path1` | Primo sentiero / First path | 1 | 10 |
-| `cs.path4` | Metà dei sentieri / Half the paths | 4 | 15 |
-| `cs.pathall` | Tutti i sentieri / Every path | 8 | 30 |
-| `cs.pathstars12` | Stelle sul sentiero / Stars on the path | 12 | 15 |
-| `cs.pathstars24` | Sentieri a tre stelle / Three-star paths | 24 | 30 |
+| `cs.path4` | Metà dei sentieri / Half the paths | 10 | 15 |
+| `cs.pathall` | Tutti i sentieri / Every path | 20 | 30 |
+| `cs.pathstars12` | Stelle sul sentiero / Stars on the path | 30 | 15 |
+| `cs.pathstars24` | Sentieri a tre stelle / Three-star paths | 60 | 30 |
 | `cs.pathperfect` | Scintilla intatta / Spark intact | 1 | 15 |
 | `cs.pathkills` | Sentiero sgombro / Clear path | 1000 | 20 |
 | `cs.pathbuild` | Cantiere aperto / Building site | 40 | 10 |
