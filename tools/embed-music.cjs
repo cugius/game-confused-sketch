@@ -3,7 +3,7 @@
    Uso: node tools/embed-music.cjs [--check] */
 const fs=require('fs'),path=require('path');
 const root=path.join(__dirname,'..'),html=path.join(root,'dist','index.html'),dir=path.join(root,'audio');
-const ids=['menu','frozen','neon','victory','gameover'];
+const ids=['menu','build','wave','paths','boss','victory','gameover'];
 const data={};for(const id of ids)data[id]=fs.readFileSync(path.join(dir,id+'.mp3')).toString('base64');
 const block='<!--music-data:start--><script type="application/json" id="music-data">'+JSON.stringify(data)+'</script><!--music-data:end-->';
 let s=fs.readFileSync(html,'utf8');
