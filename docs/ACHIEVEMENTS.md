@@ -3,7 +3,7 @@
 Generato da `node tools/gc-definitions.cjs` — non modificare a mano.
 
 - Prefisso identificatori: `cs.`
-- Traguardi: 32 · punti totali 745 (massimo Apple: 1000, 100 per traguardo)
+- Traguardi: 44 · punti totali 945 (massimo Apple: 1000, 100 per traguardo)
 - Lingue: it, en, es, fr, de, ja
 
 Da creare in App Store Connect → Game Center prima della pubblicazione: ogni ID sotto, con punti e localizzazioni da `gamecenter/definitions.json`.
@@ -61,9 +61,26 @@ Da creare in App Store Connect → Game Center prima della pubblicazione: ogni I
 |---|---|---|---|
 | `cs.daily1` | Sfida accettata / Challenge accepted | 1 | 15 |
 | `cs.daily7` | Abitudine / Habit | 7 | 30 |
-| `cs.eraser1` | Dall’altra parte / The other side | 1 | 30 |
+| `cs.both` | Due modi di giocare / Two ways to play | 2 | 20 |
+| `cs.papers` | Collezione di fogli / Paper collection | 6 | 15 |
+| `cs.daily30` | Un mese di sfide / A month of challenges | 30 | 20 |
+| `cs.dailystars` | Sfida perfetta / Perfect challenge | 12 | 15 |
 | `cs.score3000` | Tremila punti / Three thousand points | 3000 | 20 |
 | `cs.score10000` | Diecimila punti / Ten thousand points | 10000 | 40 |
+
+## Percorsi
+
+| ID | Nome | Obiettivo | Punti |
+|---|---|---|---|
+| `cs.path1` | Primo sentiero / First path | 1 | 10 |
+| `cs.path4` | Metà dei sentieri / Half the paths | 4 | 15 |
+| `cs.pathall` | Tutti i sentieri / Every path | 8 | 30 |
+| `cs.pathstars12` | Stelle sul sentiero / Stars on the path | 12 | 15 |
+| `cs.pathstars24` | Sentieri a tre stelle / Three-star paths | 24 | 30 |
+| `cs.pathperfect` | Scintilla intatta / Spark intact | 1 | 15 |
+| `cs.pathkills` | Sentiero sgombro / Clear path | 1000 | 20 |
+| `cs.pathbuild` | Cantiere aperto / Building site | 40 | 10 |
+| `cs.pathlevel` | Allieva del Laboratorio / Laboratory apprentice | 10 | 15 |
 
 ## Classifiche
 

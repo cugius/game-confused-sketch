@@ -122,3 +122,20 @@ Metodo: screenshot a 390×780 di 21 pannelli (home, carta, mappe, menu, impostaz
 - Laboratorio: sei chip e molte schede lunghe; una vista ad albero delle ricerche renderebbe chiari i prerequisiti.
 - Schermate di vittoria/sconfitta dei Percorsi: aggiungere il riepilogo (gomme fermate, difese perse).
 - Verificare su dispositivo: Caveat a 22 px per i pulsanti nel Giapponese (fallback `cursive` di sistema), consumo della home animata su iPhone vecchi (si può spegnere con movimento ridotto).
+
+---
+
+## v0.46 · Terza passata (home, traguardi, tutorial)
+
+| Area | Cambiamento |
+|---|---|
+| Home | Titolo su una riga; il campo di gioco occupa tutto lo spazio centrale. Due modalità come pulsanti principali (Quaderno, Percorsi); sotto Sfida, Traguardi, Gommario, Opzioni. «Nuovo foglio» e «Gomma» tolti (vedi `docs/ERASER-MODE.md`); il sottotitolo «uguale per tutti» è sparito. «Riprendi» compare solo se c'è un quaderno salvato. |
+| Demo | Due cerchi concentrici con difese e gomme; ogni 7 s il foglio cambia (quadretti, pergamena, righe, puntinata, carta paglia, lucido, millimetrata, riciclata) con la didascalia «Foglio: …». |
+| Diario | Ora «Traguardi». 44 traguardi in 6 gruppi: nuovo gruppo Percorsi (9) e altri 4 per Quaderno/Sfida; tolto «Dall'altra parte» (Gomma). Punti totali 945/1000 per Game Center. |
+| Tutorial | Interattivo sul motore vero (Quaderno a quadretti, la scintilla non muore, nessun salvataggio): costruisci, avvia l'ondata, ripara una breccia. Si apre da «Come si gioca» e da «Scegli il foglio» finché non è stato completato. |
+| Scintilla | Semisfera appoggiata al foglio (niente più «buco nero») e barra della vita sotto, anche nel Quaderno. |
+| Difese | Texture carta (fibre, puntini, linee vergate) sulle facce in 2.5D. |
+| Poteri | Il tasto «⌄» è un'icona fulmine con «+», centrata. |
+| Crediti | Senza nomi propri né riferimenti ad altri giochi: musiche IA (Gemini), font Caveat OFL, effetti sintetizzati. |
+
+Ancora da fare: miniature nel Gommario, riepilogo a fine Percorsi, alternative al font Caveat (campioni in `docs/FONTS.md`), musiche nuove (prompt in `docs/prompt musiche gemini.md`).

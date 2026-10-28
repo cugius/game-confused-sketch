@@ -42,7 +42,7 @@
         "es": "Supera 25 oleadas en total.",
         "fr": "Termine 25 vagues au total.",
         "de": "Schließe insgesamt 25 Wellen ab.",
-        "ja": "合計 25 ウェーブをクリアする。"
+        "ja": "合計25ウェーブをクリアする。"
       }
     },
     {
@@ -64,7 +64,7 @@
         "es": "Supera 100 oleadas en total.",
         "fr": "Termine 100 vagues au total.",
         "de": "Schließe insgesamt 100 Wellen ab.",
-        "ja": "合計 100 ウェーブをクリアする。"
+        "ja": "合計100ウェーブをクリアする。"
       }
     },
     {
@@ -86,7 +86,7 @@
         "es": "Completa los ocho asaltos del cuaderno.",
         "fr": "Termine les huit assauts du cahier.",
         "de": "Schließe die acht Angriffe des Hefts ab.",
-        "ja": "ノートの 8 つの襲撃をすべてクリアする。"
+        "ja": "ノートの8つの襲撃をすべてクリアする。"
       }
     },
     {
@@ -108,7 +108,7 @@
         "es": "Completa el cuaderno 5 veces.",
         "fr": "Termine le cahier 5 fois.",
         "de": "Schließe das Heft 5 Mal ab.",
-        "ja": "ノートを 5 回クリアする。"
+        "ja": "ノートを5回クリアする。"
       }
     },
     {
@@ -130,7 +130,7 @@
         "es": "Consigue 12 estrellas en el cuaderno.",
         "fr": "Obtiens 12 étoiles dans le cahier.",
         "de": "Sammle 12 Sterne im Heft.",
-        "ja": "ノートで星を 12 個集める。"
+        "ja": "ノートで星を12個集める。"
       }
     },
     {
@@ -144,7 +144,7 @@
         "es": "Tres estrellas en todas partes",
         "fr": "Trois étoiles partout",
         "de": "Überall drei Sterne",
-        "ja": "どこでも星 3 つ"
+        "ja": "どこでも星3つ"
       },
       "descriptions": {
         "it": "Ottieni tutte le 24 stelle del quaderno.",
@@ -152,7 +152,7 @@
         "es": "Consigue las 24 estrellas del cuaderno.",
         "fr": "Obtiens les 24 étoiles du cahier.",
         "de": "Sammle alle 24 Sterne im Heft.",
-        "ja": "ノートの星 24 個をすべて集める。"
+        "ja": "ノートの星24個をすべて集める。"
       }
     },
     {
@@ -196,7 +196,7 @@
         "es": "Protege tres círculos concéntricos.",
         "fr": "Protège trois cercles concentriques.",
         "de": "Schütze drei konzentrische Kreise.",
-        "ja": "同心円を 3 つ守る。"
+        "ja": "同心円を3つ守る。"
       }
     },
     {
@@ -210,7 +210,7 @@
         "es": "Cinco trazos",
         "fr": "Cinq traits",
         "de": "Fünf Zeichen",
-        "ja": "5 つの印"
+        "ja": "5つの印"
       },
       "descriptions": {
         "it": "Usa tutte e cinque le difese nella stessa partita.",
@@ -218,7 +218,7 @@
         "es": "Usa las cinco defensas en la misma partida.",
         "fr": "Utilise les cinq défenses dans la même partie.",
         "de": "Nutze alle fünf Verteidigungen im selben Spiel.",
-        "ja": "同じゲームで 5 種類すべての防衛を使う。"
+        "ja": "同じゲームで5種類すべての防衛を使う。"
       }
     },
     {
@@ -240,7 +240,7 @@
         "es": "Construye 50 defensas.",
         "fr": "Construis 50 défenses.",
         "de": "Baue 50 Verteidigungen.",
-        "ja": "防衛を 50 個建てる。"
+        "ja": "防衛を50個建てる。"
       }
     },
     {
@@ -262,7 +262,7 @@
         "es": "Mejora las defensas 25 veces.",
         "fr": "Améliore les défenses 25 fois.",
         "de": "Verbessere Verteidigungen 25 Mal.",
-        "ja": "防衛を 25 回強化する。"
+        "ja": "防衛を25回強化する。"
       }
     },
     {
@@ -284,7 +284,7 @@
         "es": "Completa una especialización.",
         "fr": "Termine une spécialisation.",
         "de": "Schließe eine Spezialisierung ab.",
-        "ja": "特化を 1 つ完成させる。"
+        "ja": "特化を1つ完成させる。"
       }
     },
     {
@@ -306,7 +306,7 @@
         "es": "Detén 100 gomas.",
         "fr": "Arrête 100 gommes.",
         "de": "Stoppe 100 Radierer.",
-        "ja": "消しゴムを 100 個止める。"
+        "ja": "消しゴムを100個止める。"
       }
     },
     {
@@ -328,7 +328,7 @@
         "es": "Detén 1000 gomas.",
         "fr": "Arrête 1000 gommes.",
         "de": "Stoppe 1000 Radierer.",
-        "ja": "消しゴムを 1000 個止める。"
+        "ja": "消しゴムを1000個止める。"
       }
     },
     {
@@ -350,7 +350,7 @@
         "es": "Detén 5000 gomas.",
         "fr": "Arrête 5000 gommes.",
         "de": "Stoppe 5000 Radierer.",
-        "ja": "消しゴムを 5000 個止める。"
+        "ja": "消しゴムを5000個止める。"
       }
     },
     {
@@ -394,7 +394,7 @@
         "es": "Derrota a 10 jefes.",
         "fr": "Bats 10 boss.",
         "de": "Besiege 10 Bosse.",
-        "ja": "ボスを 10 体倒す。"
+        "ja": "ボスを10体倒す。"
       }
     },
     {
@@ -416,7 +416,7 @@
         "es": "Completa una oleada sin dañar la chispa.",
         "fr": "Termine une vague sans abîmer l’étincelle.",
         "de": "Schließe eine Welle ab, ohne den Funken zu beschädigen.",
-        "ja": "火花にダメージを受けずに 1 ウェーブをクリアする。"
+        "ja": "火花にダメージを受けずに1ウェーブをクリアする。"
       }
     },
     {
@@ -438,7 +438,7 @@
         "es": "Completa 10 oleadas sin dañar la chispa.",
         "fr": "Termine 10 vagues sans abîmer l’étincelle.",
         "de": "Schließe 10 Wellen ab, ohne den Funken zu beschädigen.",
-        "ja": "火花にダメージを受けずに 10 ウェーブをクリアする。"
+        "ja": "火花にダメージを受けずに10ウェーブをクリアする。"
       }
     },
     {
@@ -460,7 +460,7 @@
         "es": "Supera la oleada 12.",
         "fr": "Termine la vague 12.",
         "de": "Schließe Welle 12 ab.",
-        "ja": "ウェーブ 12 をクリアする。"
+        "ja": "ウェーブ 12をクリアする。"
       }
     },
     {
@@ -482,7 +482,7 @@
         "es": "Supera la oleada 20.",
         "fr": "Termine la vague 20.",
         "de": "Schließe Welle 20 ab.",
-        "ja": "ウェーブ 20 をクリアする。"
+        "ja": "ウェーブ 20をクリアする。"
       }
     },
     {
@@ -504,7 +504,7 @@
         "es": "Completa 10 investigaciones.",
         "fr": "Termine 10 recherches.",
         "de": "Schließe 10 Forschungen ab.",
-        "ja": "研究を 10 回完了する。"
+        "ja": "研究を10回完了する。"
       }
     },
     {
@@ -526,7 +526,7 @@
         "es": "Repara las defensas 10 veces.",
         "fr": "Répare les défenses 10 fois.",
         "de": "Repariere Verteidigungen 10 Mal.",
-        "ja": "防衛を 10 回修理する。"
+        "ja": "防衛を10回修理する。"
       }
     },
     {
@@ -592,7 +592,7 @@
         "es": "Usa los poderes 25 veces.",
         "fr": "Utilise les pouvoirs 25 fois.",
         "de": "Nutze Kräfte 25 Mal.",
-        "ja": "パワーを 25 回使う。"
+        "ja": "パワーを25回使う。"
       }
     },
     {
@@ -636,29 +636,95 @@
         "es": "Juega el Reto diario en 7 días distintos.",
         "fr": "Joue le Défi du jour sur 7 jours différents.",
         "de": "Spiele die Tagesherausforderung an 7 verschiedenen Tagen.",
-        "ja": "デイリーチャレンジを 7 日違う日に遊ぶ。"
+        "ja": "異なる7日にデイリーチャレンジを遊ぶ。"
       }
     },
     {
-      "id": "cs.eraser1",
+      "id": "cs.both",
       "group": "Modalità",
-      "points": 30,
-      "goal": 1,
+      "points": 20,
+      "goal": 2,
       "names": {
-        "it": "Dall’altra parte",
-        "en": "The other side",
-        "es": "Del otro lado",
-        "fr": "De l’autre côté",
-        "de": "Die andere Seite",
-        "ja": "反対側から"
+        "it": "Due modi di giocare",
+        "en": "Two ways to play",
+        "es": "Dos formas de jugar",
+        "fr": "Deux façons de jouer",
+        "de": "Zwei Spielweisen",
+        "ja": "2つの遊び方"
       },
       "descriptions": {
-        "it": "Vinci una partita in modalità Gomma.",
-        "en": "Win a game in Eraser mode.",
-        "es": "Gana una partida en modo Goma.",
-        "fr": "Gagne une partie en mode Gomme.",
-        "de": "Gewinne ein Spiel im Radierer-Modus.",
-        "ja": "消しゴムモードで勝利する。"
+        "it": "Completa il Quaderno e una mappa dei Percorsi.",
+        "en": "Complete the Notebook and one Paths map.",
+        "es": "Completa el Cuaderno y un mapa de Recorridos.",
+        "fr": "Termine le Cahier et une carte des Parcours.",
+        "de": "Schließe das Heft und eine Pfade-Karte ab.",
+        "ja": "ノートとコースのマップを1つクリアする。"
+      }
+    },
+    {
+      "id": "cs.papers",
+      "group": "Modalità",
+      "points": 15,
+      "goal": 6,
+      "names": {
+        "it": "Collezione di fogli",
+        "en": "Paper collection",
+        "es": "Colección de papeles",
+        "fr": "Collection de papiers",
+        "de": "Papiersammlung",
+        "ja": "用紙コレクション"
+      },
+      "descriptions": {
+        "it": "Gioca su 6 tipi di foglio diversi.",
+        "en": "Play on 6 different paper types.",
+        "es": "Juega en 6 tipos de papel distintos.",
+        "fr": "Joue sur 6 types de papier différents.",
+        "de": "Spiele auf 6 verschiedenen Papiersorten.",
+        "ja": "6種類の用紙で遊ぶ。"
+      }
+    },
+    {
+      "id": "cs.daily30",
+      "group": "Modalità",
+      "points": 20,
+      "goal": 30,
+      "names": {
+        "it": "Un mese di sfide",
+        "en": "A month of challenges",
+        "es": "Un mes de retos",
+        "fr": "Un mois de défis",
+        "de": "Ein Monat voller Herausforderungen",
+        "ja": "チャレンジの1か月"
+      },
+      "descriptions": {
+        "it": "Gioca la Sfida del giorno in 30 giorni diversi.",
+        "en": "Play the Daily Challenge on 30 different days.",
+        "es": "Juega el Reto diario en 30 días distintos.",
+        "fr": "Joue le Défi du jour sur 30 jours différents.",
+        "de": "Spiele die Tagesherausforderung an 30 verschiedenen Tagen.",
+        "ja": "異なる30日にデイリーチャレンジを遊ぶ。"
+      }
+    },
+    {
+      "id": "cs.dailystars",
+      "group": "Modalità",
+      "points": 15,
+      "goal": 12,
+      "names": {
+        "it": "Sfida perfetta",
+        "en": "Perfect challenge",
+        "es": "Reto perfecto",
+        "fr": "Défi parfait",
+        "de": "Perfekte Herausforderung",
+        "ja": "完璧なチャレンジ"
+      },
+      "descriptions": {
+        "it": "Ottieni tutte le 12 stelle della Sfida.",
+        "en": "Earn all 12 stars of the Challenge.",
+        "es": "Consigue las 12 estrellas del Reto.",
+        "fr": "Obtiens les 12 étoiles du Défi.",
+        "de": "Erhalte alle 12 Sterne der Herausforderung.",
+        "ja": "チャレンジの星を12個すべて獲得する。"
       }
     },
     {
@@ -672,7 +738,7 @@
         "es": "Tres mil puntos",
         "fr": "Trois mille points",
         "de": "Dreitausend Punkte",
-        "ja": "3000 ポイント"
+        "ja": "3000ポイント"
       },
       "descriptions": {
         "it": "Raggiungi 3000 punti in una partita.",
@@ -680,7 +746,7 @@
         "es": "Alcanza 3000 puntos en una partida.",
         "fr": "Atteins 3000 points en une partie.",
         "de": "Erreiche 3000 Punkte in einem Spiel.",
-        "ja": "1 回のゲームで 3000 ポイントに到達する。"
+        "ja": "1回のゲームで3000ポイントに到達する。"
       }
     },
     {
@@ -694,7 +760,7 @@
         "es": "Diez mil puntos",
         "fr": "Dix mille points",
         "de": "Zehntausend Punkte",
-        "ja": "1 万ポイント"
+        "ja": "1万ポイント"
       },
       "descriptions": {
         "it": "Raggiungi 10000 punti in una partita.",
@@ -702,7 +768,205 @@
         "es": "Alcanza 10000 puntos en una partida.",
         "fr": "Atteins 10000 points en une partie.",
         "de": "Erreiche 10000 Punkte in einem Spiel.",
-        "ja": "1 回のゲームで 10000 ポイントに到達する。"
+        "ja": "1回のゲームで10000ポイントに到達する。"
+      }
+    },
+    {
+      "id": "cs.path1",
+      "group": "Percorsi",
+      "points": 10,
+      "goal": 1,
+      "names": {
+        "it": "Primo sentiero",
+        "en": "First path",
+        "es": "Primer recorrido",
+        "fr": "Premier parcours",
+        "de": "Erster Pfad",
+        "ja": "最初のコース"
+      },
+      "descriptions": {
+        "it": "Completa una mappa dei Percorsi.",
+        "en": "Complete one Paths map.",
+        "es": "Completa un mapa de Recorridos.",
+        "fr": "Termine une carte des Parcours.",
+        "de": "Schließe eine Pfade-Karte ab.",
+        "ja": "コースのマップを1つクリアする。"
+      }
+    },
+    {
+      "id": "cs.path4",
+      "group": "Percorsi",
+      "points": 15,
+      "goal": 4,
+      "names": {
+        "it": "Metà dei sentieri",
+        "en": "Half the paths",
+        "es": "La mitad de los recorridos",
+        "fr": "La moitié des parcours",
+        "de": "Halbe Pfade",
+        "ja": "コースの半分"
+      },
+      "descriptions": {
+        "it": "Completa 4 mappe dei Percorsi.",
+        "en": "Complete 4 Paths maps.",
+        "es": "Completa 4 mapas de Recorridos.",
+        "fr": "Termine 4 cartes des Parcours.",
+        "de": "Schließe 4 Pfade-Karten ab.",
+        "ja": "コースのマップを4つクリアする。"
+      }
+    },
+    {
+      "id": "cs.pathall",
+      "group": "Percorsi",
+      "points": 30,
+      "goal": 8,
+      "names": {
+        "it": "Tutti i sentieri",
+        "en": "Every path",
+        "es": "Todos los recorridos",
+        "fr": "Tous les parcours",
+        "de": "Alle Pfade",
+        "ja": "すべてのコース"
+      },
+      "descriptions": {
+        "it": "Completa tutte le 8 mappe dei Percorsi.",
+        "en": "Complete all 8 Paths maps.",
+        "es": "Completa los 8 mapas de Recorridos.",
+        "fr": "Termine les 8 cartes des Parcours.",
+        "de": "Schließe alle 8 Pfade-Karten ab.",
+        "ja": "コースの全8マップをクリアする。"
+      }
+    },
+    {
+      "id": "cs.pathstars12",
+      "group": "Percorsi",
+      "points": 15,
+      "goal": 12,
+      "names": {
+        "it": "Stelle sul sentiero",
+        "en": "Stars on the path",
+        "es": "Estrellas en el recorrido",
+        "fr": "Étoiles sur le parcours",
+        "de": "Sterne auf dem Pfad",
+        "ja": "コースの星"
+      },
+      "descriptions": {
+        "it": "Ottieni 12 stelle nei Percorsi.",
+        "en": "Earn 12 stars in Paths.",
+        "es": "Consigue 12 estrellas en Recorridos.",
+        "fr": "Obtiens 12 étoiles dans les Parcours.",
+        "de": "Erhalte 12 Sterne in Pfade.",
+        "ja": "コースで星を12個獲得する。"
+      }
+    },
+    {
+      "id": "cs.pathstars24",
+      "group": "Percorsi",
+      "points": 30,
+      "goal": 24,
+      "names": {
+        "it": "Sentieri a tre stelle",
+        "en": "Three-star paths",
+        "es": "Recorridos de tres estrellas",
+        "fr": "Parcours à trois étoiles",
+        "de": "Pfade mit drei Sternen",
+        "ja": "3つ星のコース"
+      },
+      "descriptions": {
+        "it": "Ottieni tutte le 24 stelle dei Percorsi.",
+        "en": "Earn all 24 stars in Paths.",
+        "es": "Consigue las 24 estrellas de Recorridos.",
+        "fr": "Obtiens les 24 étoiles des Parcours.",
+        "de": "Erhalte alle 24 Sterne in Pfade.",
+        "ja": "コースの星を24個すべて獲得する。"
+      }
+    },
+    {
+      "id": "cs.pathperfect",
+      "group": "Percorsi",
+      "points": 15,
+      "goal": 1,
+      "names": {
+        "it": "Scintilla intatta",
+        "en": "Spark intact",
+        "es": "Chispa intacta",
+        "fr": "Étincelle intacte",
+        "de": "Funke unversehrt",
+        "ja": "無傷の火花"
+      },
+      "descriptions": {
+        "it": "Completa una mappa senza perdere vita alla scintilla.",
+        "en": "Complete a map without the spark losing any life.",
+        "es": "Completa un mapa sin que la chispa pierda vida.",
+        "fr": "Termine une carte sans que l’étincelle perde de vie.",
+        "de": "Schließe eine Karte ab, ohne dass der Funke Leben verliert.",
+        "ja": "火花のライフを減らさずにマップをクリアする。"
+      }
+    },
+    {
+      "id": "cs.pathkills",
+      "group": "Percorsi",
+      "points": 20,
+      "goal": 1000,
+      "names": {
+        "it": "Sentiero sgombro",
+        "en": "Clear path",
+        "es": "Recorrido despejado",
+        "fr": "Parcours dégagé",
+        "de": "Freier Pfad",
+        "ja": "すっきりしたコース"
+      },
+      "descriptions": {
+        "it": "Ferma 1000 gomme nei Percorsi.",
+        "en": "Stop 1000 erasers in Paths.",
+        "es": "Detén 1000 gomas en Recorridos.",
+        "fr": "Arrête 1000 gommes dans les Parcours.",
+        "de": "Stoppe 1000 Radierer in Pfade.",
+        "ja": "コースで消しゴムを1000個止める。"
+      }
+    },
+    {
+      "id": "cs.pathbuild",
+      "group": "Percorsi",
+      "points": 10,
+      "goal": 40,
+      "names": {
+        "it": "Cantiere aperto",
+        "en": "Building site",
+        "es": "Obra en marcha",
+        "fr": "Chantier ouvert",
+        "de": "Baustelle offen",
+        "ja": "工事中"
+      },
+      "descriptions": {
+        "it": "Costruisci 40 difese nei Percorsi.",
+        "en": "Build 40 defenses in Paths.",
+        "es": "Construye 40 defensas en Recorridos.",
+        "fr": "Construis 40 défenses dans les Parcours.",
+        "de": "Baue 40 Verteidigungen in Pfade.",
+        "ja": "コースで防衛を40基建てる。"
+      }
+    },
+    {
+      "id": "cs.pathlevel",
+      "group": "Percorsi",
+      "points": 15,
+      "goal": 10,
+      "names": {
+        "it": "Allieva del Laboratorio",
+        "en": "Laboratory apprentice",
+        "es": "Aprendiz del Laboratorio",
+        "fr": "Apprentie du Laboratoire",
+        "de": "Laborlehrling",
+        "ja": "研究所の見習い"
+      },
+      "descriptions": {
+        "it": "Raggiungi il livello 10 nei Percorsi.",
+        "en": "Reach level 10 in Paths.",
+        "es": "Alcanza el nivel 10 en Recorridos.",
+        "fr": "Atteins le niveau 10 dans les Parcours.",
+        "de": "Erreiche Level 10 in Pfade.",
+        "ja": "コースでレベル10に到達する。"
       }
     }
   ],
