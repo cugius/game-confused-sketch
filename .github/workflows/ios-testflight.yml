@@ -3,7 +3,7 @@ name: iOS TestFlight upload
 on:
   push:
     branches: [main]
-    paths: ['.github/workflows/ios-testflight.yml']
+    paths: ['.github/workflows/ios-testflight.yml', 'scripts/check-appstore.rb']
   workflow_dispatch:
     inputs:
       marketing_version:

@@ -35,6 +35,21 @@ begin
   end
   apps = JSON.parse(response.body).fetch('data')
   if apps.empty?
+    # Inspect only app identities relevant to this project; never print unrelated apps.
+    uri.query = URI.encode_www_form('filter[name]' => 'Confused Sketch', 'limit' => '200')
+    lookup = Net::HTTP::Get.new(uri)
+    lookup['Authorization'] = "Bearer #{token}"
+    result = Net::HTTP.start(uri.host, uri.port, use_ssl: true, open_timeout: 20, read_timeout: 30) { |http| http.request(lookup) }
+    if result.code == '200'
+      matches = JSON.parse(result.body).fetch('data').select { |app| app.fetch('attributes').fetch('name').downcase.include?('sketch') }
+      matches.each do |app|
+        attributes = app.fetch('attributes')
+        puts "APP_MATCH: #{attributes.fetch('name')} | Bundle ID: #{attributes.fetch('bundleId')} | App ID: #{app.fetch('id')}"
+      end
+      puts 'APP_MATCH: nessuna app Sketch accessibile alla chiave configurata.' if matches.empty?
+    else
+      puts "Ricerca per nome non disponibile (HTTP #{result.code})."
+    end
     abort "::error::Nessuna app accessibile con Bundle ID #{bundle}. Creare la scheda app in App Store Connect oppure correggere il Bundle ID/accesso della chiave prima dell'upload."
   end
   puts "PASS: App Store Connect vede #{bundle} (app ID #{apps.first.fetch('id')})."
