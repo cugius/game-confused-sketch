@@ -97,3 +97,28 @@ Il codice è un unico file HTML: sono state modificate circa 38 righe (aggiunte 
 - Non ho bilanciato nulla: velocità 2× e nuovo testo non cambiano i numeri del gioco.
 - Non ho misurato la leggibilità in movimento con persone reali; le osservazioni sui nemici vengono da un singolo fotogramma.
 - Il Laboratorio a tre schede e il selettore di priorità sono proposte, non implementate.
+
+---
+
+## v0.45 · Seconda review (home, tema, impostazioni, audio)
+
+Metodo: screenshot a 390×780 di 21 pannelli (home, carta, mappe, menu, impostazioni ×4, guida, gommario, diario, lingua, laboratorio ×2, catalogo difese, dettagli torre, foglio, poteri, strumenti, previsione).
+
+### Trovato e corretto
+
+| Area | Problema | Intervento |
+|---|---|---|
+| Home | Scheda centrata su fondo quasi opaco: il gioco non si vedeva, cinque pulsanti di pari peso | Home stile Droplet: partita dimostrativa animata dietro (isolata: non salva, non conta statistiche, non suona), titolo in alto, in basso un solo CTA grande + griglia 2×3 con icone, crediti (i) e regole (?) negli angoli, "Riprendi" prima di tutto se c'è un foglio salvato |
+| Tema | Georgia + verde generico: nulla legava la grafica di gioco (matita, polvere di grafite) all'interfaccia | Tema "penna colorata": Caveat (OFL) per titoli e pulsanti, bordi a mano libera, sottolineatura a onda rossa sui titoli, inchiostri blu/rosso/verde |
+| Impostazioni | Doppioni: velocità (c'è già 1×/2× nel gioco), "Ricentra il foglio", "Stato del foglio" (è nel Laboratorio), "Prova suoni", guida duplicata, nota di installazione anche dentro l'app | Rimossi o spostati: la velocità resta solo nel gioco, "Ricentra" è un pulsante sul campo che compare solo quando la vista è spostata, la nota di installazione solo su iPhone in Safari. Info ora contiene Crediti e licenze, guida, cancella dati |
+| Icona impostazioni | Ingranaggio ⚙ | Icona a cursori (la stessa di Confused Words), SVG |
+| Tab impostazioni | Glifi Unicode di dimensione incoerente (◐ minuscolo) | Icone SVG a tratto |
+| Laboratorio | Schede senza figura con il glifo ⌁ ripetuto; chip che finiscono fuori schermo senza segnali | Icone SVG per tipo (cucitura, cerchi, vento, scudo, stasi, tempesta, evoluzione, goccia, lampadina); chip con sfumatura sul bordo e stile penna |
+| Audio | Effetti inudibili, musica assente | Vedi `docs/MUSIC.md` |
+| Crediti | Non esistevano | Pagina Crediti e licenze (musiche, effetti, caratteri con testo OFL, grafica, tecnologie, lingue, dati) + `THIRD-PARTY-NOTICES.txt` |
+
+### Ancora da fare (non toccato)
+- Bestiario e Diario sono elenchi di testo: aggiungere la miniatura di ogni gomma.
+- Laboratorio: sei chip e molte schede lunghe; una vista ad albero delle ricerche renderebbe chiari i prerequisiti.
+- Schermate di vittoria/sconfitta dei Percorsi: aggiungere il riepilogo (gomme fermate, difese perse).
+- Verificare su dispositivo: Caveat a 22 px per i pulsanti nel Giapponese (fallback `cursive` di sistema), consumo della home animata su iPhone vecchi (si può spegnere con movimento ridotto).

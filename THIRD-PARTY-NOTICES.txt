@@ -1,0 +1,19 @@
+Confused Sketch — avvisi di terze parti / third-party notices
+
+1. Carattere / Font: Caveat
+   Copyright 2014 The Caveat Project Authors (https://github.com/googlefonts/caveat)
+   Licenza / License: SIL Open Font License 1.1 — testo completo in fonts/Caveat-OFL.txt e nella pagina Crediti del gioco.
+   Incorporato in dist/index.html come sottoinsieme latino (fonts/Caveat-latin.woff). Nessun nome riservato modificato.
+
+2. Musiche / Music (audio/*.mp3)
+   Brani generati con Google Gemini su indicazioni dell'autore e rifiniti (loudnorm, tagli, dissolvenze):
+   - menu.mp3      da Confused Droplet "01-sun-dappled_canopy"
+   - frozen.mp3    da Confused Droplet "05-frozen-night"
+   - neon.mp3      da Confused Droplet "07-neon"
+   - victory.mp3   da Confused Droplet "09-victory"
+   - gameover.mp3  da Confused Photon "game-over" (Gravity's gentle pull)
+   Verificare le condizioni d'uso di Google per l'uso commerciale prima della pubblicazione sullo store.
+
+3. Effetti sonori: sintetizzati dal gioco con Web Audio, nessun campione di terzi.
+4. Grafica e icone: disegnate nel gioco (Canvas 2D / WebGL / SVG originali), nessuna immagine di terzi.
+5. Librerie JavaScript: nessuna.

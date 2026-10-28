@@ -1,5 +1,6 @@
 import UIKit
 import WebKit
+import AVFoundation
 
 final class GameViewController: UIViewController, WKNavigationDelegate {
     private var webView: WKWebView!
@@ -33,6 +34,8 @@ final class GameViewController: UIViewController, WKNavigationDelegate {
         ])
         lockPageScale()
         NotificationCenter.default.addObserver(self, selector: #selector(pauseGame), name: UIApplication.willResignActiveNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(resumeAudio), name: UIApplication.didBecomeActiveNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(resumeAudio), name: AVAudioSession.interruptionNotification, object: nil)
         guard let page = Bundle.main.url(forResource: "index", withExtension: "html", subdirectory: "Web") else {
             let error = UILabel(frame: view.bounds)
             error.text = "Il foglio non è disponibile. Ricompila le risorse Web."
@@ -57,6 +60,10 @@ final class GameViewController: UIViewController, WKNavigationDelegate {
     }
     @objc private func pauseGame() {
         webView.evaluateJavaScript("window.dispatchEvent(new Event('blur'))", completionHandler: nil)
+    }
+    @objc private func resumeAudio() {
+        try? AVAudioSession.sharedInstance().setActive(true)
+        webView.evaluateJavaScript("window.__audioResume && window.__audioResume()", completionHandler: nil)
     }
     deinit { NotificationCenter.default.removeObserver(self) }
 }
