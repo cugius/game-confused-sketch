@@ -1,6 +1,6 @@
 # TestFlight — Confused Sketch
 
-Workflow: .github/workflows/ios-testflight.yml. Bundle ID: com.confusedbyme.sketch.
+Workflow: .github/workflows/ios-testflight.yml. Bundle ID: com.confusedbyme.confusedsketch.
 
 Uses the same cloud signing configuration as Confused Photon. Configure these four secrets at repository level or in the testflight environment:
 

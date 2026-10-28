@@ -39,6 +39,6 @@ Per aggiornare le risorse: modificare gli originali in `assets/`, eseguire il re
 **iOS Simulator** compila solo per il simulatore: il suo artefatto non si installa su iPhone.
 **iOS TestFlight upload** verifica l'accesso all'app su Apple, compila, firma e invia ad App Store Connect. Vedi [istruzioni TestFlight](ios/TESTFLIGHT.md).
 
-La prima build è stata compilata, ma l'export è fallito con `Error Downloading App Information`: non è stata caricata su Apple. Il preflight ora distingue chiave rifiutata, permessi insufficienti e scheda app mancante per `com.confusedbyme.sketch`.
+La prima build è stata compilata, ma l'export è fallito con `Error Downloading App Information`: non è stata caricata su Apple. Il preflight ora distingue chiave rifiutata, permessi insufficienti e scheda app mancante per `com.confusedbyme.confusedsketch`.
 
 Non salvare credenziali, certificati o file P8 nel repository.

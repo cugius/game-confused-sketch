@@ -11,7 +11,7 @@ def b64(value)
 end
 
 begin
-  bundle = 'com.confusedbyme.sketch'
+  bundle = 'com.confusedbyme.confusedsketch'
   now = Time.now.to_i
   header = b64(JSON.generate(alg: 'ES256', kid: ENV.fetch('ASC_KEY_ID'), typ: 'JWT'))
   payload = b64(JSON.generate(iss: ENV.fetch('ASC_ISSUER_ID'), iat: now, exp: now + 120, aud: 'appstoreconnect-v1'))

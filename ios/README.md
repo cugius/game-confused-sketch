@@ -1,6 +1,6 @@
 # Wrapper iOS — Confused Sketch
 
-Bundle ID: `com.confusedbyme.sketch`. iOS 16+, iPhone e iPad. UIKit + WKWebView: il gioco è copiato da `dist/index.html` a `ios/Web/index.html` durante la build e resta offline.
+Bundle ID: `com.confusedbyme.confusedsketch`. iOS 16+, iPhone e iPad. UIKit + WKWebView: il gioco è copiato da `dist/index.html` a `ios/Web/index.html` durante la build e resta offline.
 
 - [Pubblicazione TestFlight e secret richiesti](TESTFLIGHT.md).
 - `project.yml`: specifica XcodeGen; progetto Xcode e cartella Web vengono generati, non mantenuti a mano.
