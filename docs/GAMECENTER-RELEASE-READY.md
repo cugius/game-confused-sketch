@@ -24,7 +24,7 @@ The **Prepare Game Center artwork** workflow exports and commits generated files
 
 ## Apple synchronization
 
-The separate **Game Center sync** workflow remains **manual**, with `apply=false` by default. Run it from main after the artwork preparation has completed. A dry run reports missing remote resources; setting `apply=true` creates missing achievements and leaderboards, reconciles six localizations, and uploads/commits/polls all localized images (47×6 = 282 associations).
+The separate **Game Center sync** workflow remains **manual**, with `apply=false` by default. Run it from main after the artwork preparation has completed. A dry run reports missing remote resources, including a Game Center detail that has not yet been initialized; setting `apply=true` first initializes the app-level Game Center detail when needed, creates missing achievements and leaderboards, reconciles six localizations, and uploads/commits/polls all localized images (47×6 = 282 associations).
 
 The synchronizer can recover missing localizations after a partial prior run and resume image reservations. It skips completed images that match the content-addressed filenames. Existing achievement point mismatches stop the run for inspection. It never resets scores or submits an App Store review.
 
@@ -33,3 +33,7 @@ Local files being ready **does not certify that Apple already has them**. Only a
 ## Handoff to Claude
 
 Start from the latest main, preserve the AppIcon catalog, branding source, image identifiers and artwork scripts. Complete the pending game changes. The user will start the TestFlight build after those changes; choose the desired marketing version explicitly because the existing workflow default is still 0.57.0. App Store review and external tester availability are separate from generating these assets.
+
+## Apple inventory checked on 2026-10-29
+
+The authenticated read-only query found the app by its correct bundle ID, but `GET /v1/apps/{id}/gameCenterDetail` did not return an initialized detail. Therefore the Game Center catalog and its images cannot yet be considered present on Apple. All 47 local image files and the approved native app icon are already committed on main. Run **Game Center sync → apply=true** to initialize and populate the Apple catalog; this operation is separate from the iOS TestFlight build.
