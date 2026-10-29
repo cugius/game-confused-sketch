@@ -4,7 +4,7 @@ The approved app icon is the dark green seal with **white graph paper**, three p
 
 ## Files on main
 
-- `assets/branding/app-icon-white-paper.webp.base64`: lossless, reproducible source of the approved icon, normalized to 1024×1024. Do not use earlier yellow-paper or triangle concepts.
+- `assets/branding/app-icon-white-paper.webp.base64` plus `.part2`: split lossless, reproducible source of the approved icon, normalized to 1024×1024. Do not use earlier yellow-paper or triangle concepts.
 - `assets/gamecenter/images/cs.*.png`: 44 achievement images and 3 leaderboard images, all distinct, 1024×1024 RGB, 72 dpi.
 - The matching SVG sources, image SHA-256 values in `manifest.json`, and a `contact-sheet.jpg` visual index are in that same directory.
 - `definitions.json` remains the source for the 44 achievement identifiers, 945 points, three leaderboard identifiers and six languages (IT, EN, ES, FR, DE, JA).
