@@ -8,6 +8,8 @@ permissions:
   contents: read
 jobs:
   simulator:
+    # Artwork preparation can update main without spending macOS build minutes.
+    if: ${{ !contains(github.event.head_commit.message, '[assets only]') }}
     runs-on: macos-15
     timeout-minutes: 25
     steps:
