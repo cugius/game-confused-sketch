@@ -126,6 +126,8 @@ class Sync:
                     self.artwork(prefix,loc['id'],ROOT/'assets/gamecenter/images'/f'{vid}.png')
         if self.apply and self.ready!=282:raise RuntimeError(f'Incomplete image delivery: {self.ready}/282 localizations')
         print(f'Images ready on Apple: {self.ready}/282; new uploads: {self.uploaded}; apply={self.apply}')
+        if os.environ.get('GC_REPORT_PATH'):
+            Path(os.environ['GC_REPORT_PATH']).write_text(json.dumps({'apply':self.apply,'images_ready':self.ready,'expected_localized_images':282,'new_uploads':self.uploaded},indent=2)+'\n')
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('--apply',action='store_true');p.add_argument('--validate-only',action='store_true');args=p.parse_args()
