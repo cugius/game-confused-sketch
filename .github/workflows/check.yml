@@ -10,12 +10,30 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - run: node tests/check.cjs
       - run: node tests/balance.cjs
       - run: python3 scripts/sync-ios.py
+      - run: python3 tests/gamecenter-sync-test.py
+      - run: python3 scripts/gc-sync.py --validate-only
       - name: Validate wrapper resources
         run: python3 scripts/check-ios.py
       - uses: actions/upload-artifact@v4
         with:
           name: confused-sketch-html
           path: dist/index.html
+  browser-matrix:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm ci --ignore-scripts
+      - run: npm audit --audit-level=high
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:ui
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: confused-sketch-ui-review
+          path: build/ui-review

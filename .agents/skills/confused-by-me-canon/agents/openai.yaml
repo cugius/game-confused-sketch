@@ -1,0 +1,4 @@
+interface:
+  display_name: "Confused By Me Canon"
+  short_description: "Applica il canon ai giochi Confused By Me"
+  default_prompt: "Usa $confused-by-me-canon per verificare questo gioco e applicare i fix autorizzati."

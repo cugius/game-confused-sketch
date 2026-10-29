@@ -1,0 +1,12 @@
+{
+  "name": "confused-sketch",
+  "private": true,
+  "version": "0.63.0",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "build": "node scripts/build-web.cjs",
+    "check": "node scripts/preflight.cjs && node tests/check.cjs && node tests/music.cjs && node tests/canon.cjs",
+    "test:ui": "node tests/responsive.cjs"
+  },
+  "devDependencies": { "playwright": "1.62.1" }
+}

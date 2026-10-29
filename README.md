@@ -2,11 +2,16 @@
 
 Gioco di **Confused By Me**. Il file da giocare e pubblicare è **[dist/index.html](dist/index.html)**: contiene codice, grafica, musica e font e funziona offline.
 
+## Canon e skill
+
+Regole comuni: [docs/CANON.md](docs/CANON.md), con [eccezioni del gioco](docs/CANON-EXCEPTIONS.md). [Configurazione delle skill da telefono](docs/SKILLS-PHONE.md).
+
 ## Dove mettere le mani
 
 | Cartella | A cosa serve | Necessaria |
 |---|---|---|
-| `dist/` | Gioco pronto e manifest web | Sì: sito e app |
+| `web/src/` | Sorgenti autorevoli di gioco, stile, musica e template | Sì: sviluppo |
+| `dist/` | HTML generato offline e manifest web | Sì: sito e app |
 | `ios/` | Wrapper Swift, icona, progetto XcodeGen e istruzioni TestFlight | Sì: iPhone/iPad |
 | `assets/` | Originali di musica/font, traduzioni e definizioni Game Center | Sì: manutenzione e rigenerazione |
 | `scripts/` | Tutti gli strumenti di sincronizzazione, generazione e pubblicazione | Sì: build e CI |
@@ -24,6 +29,9 @@ I salvataggi restano sul dispositivo. Home e pannelli non consentono zoom della 
 ## Verifiche e rigenerazione
 
 ```sh
+npm ci
+npm run build
+npm run check
 node scripts/build-i18n.cjs --check
 node scripts/embed-music.cjs --check
 node tests/check.cjs
@@ -31,6 +39,8 @@ node tests/balance.cjs
 python3 scripts/sync-ios.py
 python3 scripts/check-ios.py
 ```
+
+Modificare il codice in `web/src/`, mai nell’HTML generato. Il gate controlla rigenerazione, codice morto candidato, locale/placeholder, guardie dei bridge, chiavi private e test audio/tutorial. `npm run test:ui` richiede `npx playwright install chromium` ed esegue la matrice schermi/lingue. Gli strumenti di verifica sono dipendenze di sviluppo e non entrano nel gioco offline.
 
 Per aggiornare le risorse: modificare gli originali in `assets/`, eseguire il relativo script senza `--check`, poi risincronizzare iOS. `scripts/gc-definitions.cjs` rigenera le definizioni Game Center e la relativa documentazione.
 

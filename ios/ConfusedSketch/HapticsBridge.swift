@@ -5,9 +5,11 @@ import WebKit
 /// kind: selection · soft · light · medium · heavy · rigid · success · warning · error
 @MainActor
 final class HapticsBridge: NSObject, WKScriptMessageHandler {
+    var pageURL: URL?
     private var last = Date.distantPast
     func userContentController(_ controller: WKUserContentController, didReceive message: WKScriptMessage) {
-        guard let body = message.body as? [String: Any], let kind = body["kind"] as? String else { return }
+        guard BridgeOrigin.accepts(message, page: pageURL), UIApplication.shared.applicationState == .active,
+              let body = message.body as? [String: Any], let kind = body["kind"] as? String else { return }
         fire(kind)
     }
     private func fire(_ kind: String) {
@@ -23,7 +25,8 @@ final class HapticsBridge: NSObject, WKScriptMessageHandler {
         case "success": UINotificationFeedbackGenerator().notificationOccurred(.success)
         case "warning": UINotificationFeedbackGenerator().notificationOccurred(.warning)
         case "error": UINotificationFeedbackGenerator().notificationOccurred(.error)
-        default: UISelectionFeedbackGenerator().selectionChanged()
+        case "selection": UISelectionFeedbackGenerator().selectionChanged()
+        default: break
         }
     }
 }
