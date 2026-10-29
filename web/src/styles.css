@@ -329,3 +329,7 @@ body.home .home-head .home-side:last-child{right:max(24px,var(--safe-right))!imp
 .hud .metric>b{display:inline-block!important;height:26px;vertical-align:baseline}
 .hud .metric b small,.hud .metric>small{font-size:11px;line-height:1}
 .hud .metric>.thin{display:block!important}
+/*v0.75 HUD: grafite, scintilla e livello centrati nelle tre colonne (livello solo numero, simmetrico alla grafite)*/
+.hud .metric:nth-child(1),.hud .metric:nth-child(2),.hud .metric:nth-child(3){text-align:center}
+.hud .metric:last-child #xpValue,.hud .metric:last-child>.thin{display:none!important}
+.hud .metric:nth-child(1) .thin,.hud .metric:nth-child(2) .thin{margin-inline:auto!important}
