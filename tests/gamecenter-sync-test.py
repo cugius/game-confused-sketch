@@ -16,6 +16,19 @@ class FakeClient:
 class CatalogTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):cls.defs=json.loads((ROOT/'assets/gamecenter/definitions.json').read_text())
+    def test_missing_gamecenter_detail_is_read_only_by_default(self):
+        class C:
+            def optional(self,path):return None
+            def request(self,*a,**kw):raise AssertionError('Dry run cannot enable Game Center')
+        self.assertIsNone(gc.gamecenter_detail(C(),'app-id',False))
+    def test_apply_can_initialize_missing_gamecenter_detail(self):
+        class C:
+            def optional(self,path):return None
+            def request(self,method,path,**kw):
+                assert method=='POST' and path=='/v1/gameCenterDetails'
+                assert kw['json']['data']['relationships']['app']['data']=={'type':'apps','id':'app-id'}
+                return {'data':{'id':'new-detail'}}
+        self.assertEqual(gc.gamecenter_detail(C(),'app-id',True)['id'],'new-detail')
     def test_existing_catalog_no_mutations(self):
         c=FakeClient(self.defs);s=gc.Sync(c,True)
         def ready(*a):s.ready+=1
