@@ -1,0 +1,72 @@
+name: TestFlight readiness audit
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/testflight-readiness.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment: testflight
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install requests PyJWT cryptography
+      - name: Read TestFlight readiness without changing Apple state
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+          ASC_KEY_P8_BASE64: ${{ secrets.ASC_KEY_P8_BASE64 }}
+        run: |
+          umask 077
+          export ASC_KEY_PATH="$RUNNER_TEMP/testflight-audit.p8"
+          trap 'rm -f "$ASC_KEY_PATH"' EXIT
+          printf '%s' "$ASC_KEY_P8_BASE64" | base64 --decode > "$ASC_KEY_PATH"
+          python - <<'PYTHON'
+          import json,os,time
+          from pathlib import Path
+          from urllib.parse import urlencode
+          import jwt,requests
+          now=int(time.time())
+          token=jwt.encode({'iss':os.environ['ASC_ISSUER_ID'],'iat':now,'exp':now+900,'aud':'appstoreconnect-v1'},Path(os.environ['ASC_KEY_PATH']).read_bytes(),algorithm='ES256',headers={'kid':os.environ['ASC_KEY_ID']})
+          def get(path):
+              response=requests.get('https://api.appstoreconnect.apple.com'+path,headers={'Authorization':'Bearer '+token},timeout=(20,60))
+              if response.status_code==404:return {'data':None,'http_status':404}
+              if not response.ok:return {'data':None,'http_error':response.status_code}
+              return response.json()
+          def rows(path):
+              r=get(path);return r.get('data') or [],r.get('http_error')
+          def flags(attrs,keys):return {k:bool(str(attrs.get(k) or '').strip()) for k in keys}
+          apps,error=rows('/v1/apps?'+urlencode({'filter[bundleId]':'com.confusedbyme.confusedsketch','limit':2}))
+          if error or len(apps)!=1:raise RuntimeError('Cannot resolve Confused Sketch app with configured API access')
+          app=apps[0];aid=app['id'];review=get(f'/v1/apps/{aid}/betaAppReviewDetail');ra=(review.get('data') or {}).get('attributes',{})
+          locs,le=rows(f'/v1/apps/{aid}/betaAppLocalizations?limit=200')
+          groups,ge=rows(f'/v1/apps/{aid}/betaGroups?limit=200')
+          groupmap={g['id']:g for g in groups}
+          groupbuilds={};group_errors={}
+          for g in groups:
+              linked,error=rows(f'/v1/betaGroups/{g["id"]}/relationships/builds?limit=200');groupbuilds[g['id']]={b['id'] for b in linked}
+              if error:group_errors[g['id']]=error
+          res=get('/v1/builds?'+urlencode({'filter[app]':aid,'sort':'-uploadedDate','limit':5,'include':'preReleaseVersion'}))
+          versions={a['id']:a['attributes'] for a in res.get('included',[]) if a['type']=='preReleaseVersions'}
+          report={'read_only':True,'app':{'id':aid,'name':app['attributes'].get('name'),'primaryLocale':app['attributes'].get('primaryLocale')},'review_contact':flags(ra,['contactFirstName','contactLastName','contactPhone','contactEmail']),'demoAccountRequired':ra.get('demoAccountRequired'),'demo_account_fields_present':flags(ra,['demoAccountName','demoAccountPassword']),'review_notes_present':bool(ra.get('notes')),'review_details_http_error':review.get('http_error'),'beta_localizations_http_error':le,'beta_localizations':[{'locale':a['attributes'].get('locale'),**flags(a['attributes'],['description','feedbackEmail','privacyPolicyUrl','marketingUrl'])} for a in locs],'groups_http_error':ge,'internal_groups':sum(g['attributes'].get('isInternalGroup',False) for g in groups),'external_groups':sum(not g['attributes'].get('isInternalGroup',False) for g in groups),'builds':[]}
+          for b in res.get('data') or []:
+              bid=b['id'];attrs=b['attributes'];vid=(b.get('relationships',{}).get('preReleaseVersion',{}).get('data') or {}).get('id')
+              detail=get(f'/v1/builds/{bid}/buildBetaDetail');submission=get(f'/v1/builds/{bid}/betaAppReviewSubmission');blocs,be=rows(f'/v1/builds/{bid}/betaBuildLocalizations?limit=200')
+              linkerr=group_errors or None
+              attached=[g for g in groups if bid in groupbuilds[g['id']]]
+              a={k:attrs.get(k) for k in ['version','processingState','uploadedDate','expired','expirationDate','usesNonExemptEncryption','buildAudienceType','minOsVersion']}
+              a.update(id=bid,marketing_version=versions.get(vid,{}).get('version'),beta_state=(detail.get('data') or {}).get('attributes'),review_submission=(submission.get('data') or {}).get('attributes'),what_to_test=[{'locale':l['attributes'].get('locale'),'present':bool((l['attributes'].get('whatsNew') or '').strip())} for l in blocs],attached_internal_groups=sum(g['attributes'].get('isInternalGroup',False) for g in attached),attached_external_groups=sum(not g['attributes'].get('isInternalGroup',False) for g in attached),read_errors={'beta_detail':detail.get('http_error'),'submission':submission.get('http_error'),'test_localizations':be,'groups':linkerr})
+              report['builds'].append(a)
+          gc=get(f'/v1/apps/{aid}/gameCenterDetail');report['gamecenter_detail_present']=bool(gc.get('data'));report['gamecenter_http_error']=gc.get('http_error')
+          Path('testflight-readiness.json').write_text(json.dumps(report,indent=2)+'\n');print('TESTFLIGHT_READINESS_REPORT\n'+json.dumps(report,indent=2))
+          PYTHON
+      - uses: actions/upload-artifact@v4
+        with:
+          name: confused-sketch-testflight-readiness
+          path: testflight-readiness.json
