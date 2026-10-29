@@ -1,0 +1,472 @@
+[
+  {
+    "id": "cs.first_wave",
+    "kind": "achievements",
+    "file": "cs.first_wave.png",
+    "sha256": "8dfb0518ce36d0ddadf8000d6d8650502f2e03522edae85ec019838e20b2dd1b",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "id": "cs.waves25",
+    "kind": "achievements",
+    "file": "cs.waves25.png",
+    "sha256": "2ac80f449f978a12500763c3599df35fd42a5001085163c1f0c515338bc88f1e",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "id": "cs.waves100",
+    "kind": "achievements",
+    "file": "cs.waves100.png",
+    "sha256": "843ec8209f113798f4afd705e6bd1ae6bcd00c6c590ae6665830ace2f9db7c63",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "id": "cs.win",
+    "kind": "achievements",
+    "file": "cs.win.png",
+    "sha256": "4137fecd92bf77ea79ef4f3038390bad8de6bb60618c05e3296b2be03db78d94",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "id": "cs.win5",
+    "kind": "achievements",
+    "file": "cs.win5.png",
+    "sha256": "f6204a9932f7b23fccae35d1e389950f44e2b87b042d40439526534fceaf56c6",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "id": "cs.stars12",
+    "kind": "achievements",
+    "file": "cs.stars12.png",
+    "sha256": "1a222872223837135144cddc34f4b6cdbe3d2961b0b269297cab29139ac223b5",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "id": "cs.stars24",
+    "kind": "achievements",
+    "file": "cs.stars24.png",
+    "sha256": "26a04b58bbe4e44054b5fe8257989fbd0b97861d3e5a31b6bb0448738ab6083e",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "id": "cs.circle",
+    "kind": "achievements",
+    "file": "cs.circle.png",
+    "sha256": "b3d01b3a06d9cec290a30f2614f4290a8bf827dec641e38d4ea2cad58fa861a0",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "id": "cs.architect",
+    "kind": "achievements",
+    "file": "cs.architect.png",
+    "sha256": "0a50e7b482d6fbd5552376cbaf6d056acb62958afc2f91cdd7c2b1f82cec1d92",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "id": "cs.variety",
+    "kind": "achievements",
+    "file": "cs.variety.png",
+    "sha256": "3cc969f488c34b64b51ad0b14acbd67862b3b6ad70f1b6129bdc9bf9d58a4f47",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "id": "cs.builder50",
+    "kind": "achievements",
+    "file": "cs.builder50.png",
+    "sha256": "cabecd6942912df13331c18d4acc16ec685de12fb9e0590937428707057a7dbc",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "id": "cs.upgrade25",
+    "kind": "achievements",
+    "file": "cs.upgrade25.png",
+    "sha256": "9325f4de7340f74e0fb67ccad2605e208c03eda7e735658b52082e742443c892",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "id": "cs.spec1",
+    "kind": "achievements",
+    "file": "cs.spec1.png",
+    "sha256": "66b55eba7951f779814af550bb126b351c0f03e9aa53f0d4c1b622c887d2e120",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "id": "cs.kills100",
+    "kind": "achievements",
+    "file": "cs.kills100.png",
+    "sha256": "0c7c6c589020490fd5e6f5736e8c8f50b20ca498673085691a6b5d1b72cae35b",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "id": "cs.kills1000",
+    "kind": "achievements",
+    "file": "cs.kills1000.png",
+    "sha256": "dd26a94126543b371a75ead7ab91acd96f6ced8433c162cfbe913e07e79fe71b",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "id": "cs.kills5000",
+    "kind": "achievements",
+    "file": "cs.kills5000.png",
+    "sha256": "8a870de54070e464794aa0d3479b46bca70da3eb1edb81f85b222b8655bf8cc3",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "id": "cs.boss",
+    "kind": "achievements",
+    "file": "cs.boss.png",
+    "sha256": "74bb87f8dcdebb432eed1a1f4a22d1bcbe9426bfb258a6a2b423e5f3724776ea",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "id": "cs.boss10",
+    "kind": "achievements",
+    "file": "cs.boss10.png",
+    "sha256": "8b2f93488e6a8eff62c6fb6d6f30b3c135203d891bab3f1b89dce8a8b33fae21",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "id": "cs.perfect",
+    "kind": "achievements",
+    "file": "cs.perfect.png",
+    "sha256": "c20762dbbbfa5656d9e73e35e7f0681e3ae2bddc358151f461c0661c27f0b016",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "id": "cs.perfect10",
+    "kind": "achievements",
+    "file": "cs.perfect10.png",
+    "sha256": "a36d6e4139aa9a8f60a334468d59a71f34a8a04c8165a078f2f775721afe7d61",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "id": "cs.wave12",
+    "kind": "achievements",
+    "file": "cs.wave12.png",
+    "sha256": "26df25109971e95680ac5a97557114baf1c91778f8db2cfa2cc72f92b5dfb98d",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "id": "cs.wave20",
+    "kind": "achievements",
+    "file": "cs.wave20.png",
+    "sha256": "e454ecb60a357eb8db4076baba56e9cf547e37e2e493305cf9ef130f39f877f6",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "id": "cs.research10",
+    "kind": "achievements",
+    "file": "cs.research10.png",
+    "sha256": "7c520cb4e8a0116d17927eac963d3f7160491b481f41bab4af23f7d6172d3573",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "id": "cs.heal10",
+    "kind": "achievements",
+    "file": "cs.heal10.png",
+    "sha256": "aaf0da37d9722e46d28d621ca25f0bfcbbdcb6608a78bceef7dea643b0a61b29",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "id": "cs.healall",
+    "kind": "achievements",
+    "file": "cs.healall.png",
+    "sha256": "08f17769531b0e7fe7e027c040c7e0093f0288d3bc25eb73d86dcbbc05f87174",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "id": "cs.power1",
+    "kind": "achievements",
+    "file": "cs.power1.png",
+    "sha256": "ce7d2921c8422a68d944747e54bd71ffc2fb1d07f91f725c8f3511512cf18a22",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "id": "cs.power25",
+    "kind": "achievements",
+    "file": "cs.power25.png",
+    "sha256": "9e0847fff82fe9a4b9b32d3252a98aa08a99e05a9e58019ea4283b8dfa114051",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "id": "cs.daily1",
+    "kind": "achievements",
+    "file": "cs.daily1.png",
+    "sha256": "e79fc679d0ac3c6894b3dd83e048119d58cb56860419a5ecc4bee57a6470a466",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "id": "cs.daily7",
+    "kind": "achievements",
+    "file": "cs.daily7.png",
+    "sha256": "b04050d6609ce53d6067ec59517760483d5212abe3010e0287bab884e3036802",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "id": "cs.both",
+    "kind": "achievements",
+    "file": "cs.both.png",
+    "sha256": "c5c7427eee5d7a375eb0a88cccce1ed7da81555ad8eb33766bb3f55b66fb396d",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "id": "cs.papers",
+    "kind": "achievements",
+    "file": "cs.papers.png",
+    "sha256": "52c82c23a213093cee9e8fa7feaa3aff178069891d7f15b2f0de79a1b53628f4",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "id": "cs.daily30",
+    "kind": "achievements",
+    "file": "cs.daily30.png",
+    "sha256": "9bf13968db0a28c9ad3a872320e9c3740cc2f5c8728861e10fdc7aee194ede67",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "id": "cs.dailystars",
+    "kind": "achievements",
+    "file": "cs.dailystars.png",
+    "sha256": "5383083d6609893e567d19acf621ddfd795f7525eacc7885be59c029bb4f3307",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "id": "cs.score3000",
+    "kind": "achievements",
+    "file": "cs.score3000.png",
+    "sha256": "bc0741c106ef6c106e42aee9685fa0d1b6c6d247dde4ca37685575b8b7b625a6",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "id": "cs.score10000",
+    "kind": "achievements",
+    "file": "cs.score10000.png",
+    "sha256": "dff8d2b8a976f87c735cb8e11a988b299bea572f5d3a845bdfb2191ea44e6130",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "id": "cs.path1",
+    "kind": "achievements",
+    "file": "cs.path1.png",
+    "sha256": "4967b3497577390670816395f8a4bdb50a9a5548064fc0c2cdab452ca36fe782",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "id": "cs.path4",
+    "kind": "achievements",
+    "file": "cs.path4.png",
+    "sha256": "c8cd09ff4996d8dc18967327af9ca1bf8783c149b8dee50d5ca73a8ca9f45ecf",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "id": "cs.pathall",
+    "kind": "achievements",
+    "file": "cs.pathall.png",
+    "sha256": "2dc72f8c1802e8a5aa974219fa1bb5779affd84cb6723b864ba60560dfb5e27d",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "id": "cs.pathstars12",
+    "kind": "achievements",
+    "file": "cs.pathstars12.png",
+    "sha256": "cd788aa1676018b2081895b5b45d924f4ad945f55c1897155a8ba40121048a9d",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "id": "cs.pathstars24",
+    "kind": "achievements",
+    "file": "cs.pathstars24.png",
+    "sha256": "f399347c2c564724bec9d3b924d1b0c62103831b8e28cee24aea41998ed73265",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "id": "cs.pathperfect",
+    "kind": "achievements",
+    "file": "cs.pathperfect.png",
+    "sha256": "16ca05db568fde20c087c3cd2da3affa0873b9e24e0afd92ff6eefb650a0caa4",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "id": "cs.pathkills",
+    "kind": "achievements",
+    "file": "cs.pathkills.png",
+    "sha256": "6aa73c4255a30b7a6bdb546c0d9dab7fba1f9beeb2b871962ce141bd9ac03f61",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "id": "cs.pathbuild",
+    "kind": "achievements",
+    "file": "cs.pathbuild.png",
+    "sha256": "2ccdce11bee3deaffe052952d17c36af750ebdbdfba598fcdcea92b22583c230",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "id": "cs.pathlevel",
+    "kind": "achievements",
+    "file": "cs.pathlevel.png",
+    "sha256": "567424b85efa55d0ecf62fbdcd65240e8bd4748f9bbc2bc1223029914a77133a",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "id": "cs.best_score",
+    "kind": "leaderboards",
+    "file": "cs.best_score.png",
+    "sha256": "51b37d1c6fa9324b65b39ea252d20c4fd7fe052e6221d9bf9c9d53392afb89f8",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "id": "cs.best_wave",
+    "kind": "leaderboards",
+    "file": "cs.best_wave.png",
+    "sha256": "83d01b796a12b33fe7d8f6016f1fefa3ab89f53446febf2a1dd52f8ec41dfaca",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "id": "cs.total_stars",
+    "kind": "leaderboards",
+    "file": "cs.total_stars.png",
+    "sha256": "6859ba79b0029b18d44176914c9f5b9e47163ba5040aeb084fde3ba584964643",
+    "size": [
+      1024,
+      1024
+    ]
+  }
+]
