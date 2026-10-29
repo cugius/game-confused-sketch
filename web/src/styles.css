@@ -294,3 +294,10 @@ body.home .home-head .home-side{position:fixed!important;top:max(12px,calc(var(-
 body.home .home-head .home-side:first-child{left:max(16px,var(--safe-left))!important;right:auto!important}
 body.home .home-head .home-side:last-child{right:max(16px,var(--safe-right))!important;left:auto!important}
 body.home .home-head h1{grid-column:2!important;margin:0!important}
+/*v0.72 home: pulsanti Info/Aiuto come Droplet (top 20px, lato 24px), contenuto allineato in alto, titolo e scena più in alto*/
+body.home #overlay{padding:0!important;align-items:flex-start!important}
+body.home #dialog[data-panel=intro]{margin:0!important;max-height:none!important;padding-top:0!important;padding-left:22px!important;padding-right:22px!important}
+body.home .home-head{margin-top:calc(var(--safe-top) + 4px)!important}
+body.home .home-head .home-side{top:20px!important;width:40px!important;height:40px!important}
+body.home .home-head .home-side:first-child{left:max(24px,var(--safe-left))!important}
+body.home .home-head .home-side:last-child{right:max(24px,var(--safe-right))!important}
