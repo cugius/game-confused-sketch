@@ -333,3 +333,6 @@ body.home .home-head .home-side:last-child{right:max(24px,var(--safe-right))!imp
 .hud .metric:nth-child(1),.hud .metric:nth-child(2),.hud .metric:nth-child(3){text-align:center}
 .hud .metric:last-child #xpValue,.hud .metric:last-child>.thin{display:none!important}
 .hud .metric:nth-child(1) .thin,.hud .metric:nth-child(2) .thin{margin-inline:auto!important}
+/*v0.76 HUD: grafite a sinistra, livello al centro (solo numero), scintilla a destra*/
+.hud .metric:nth-child(3){order:2}
+.hud .metric:nth-child(2){order:3}
