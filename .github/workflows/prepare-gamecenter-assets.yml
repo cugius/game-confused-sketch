@@ -1,0 +1,83 @@
+name: Prepare Game Center artwork
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'assets/branding/app-icon-white-paper.webp.base64'
+      - 'assets/gamecenter/definitions.json'
+      - 'scripts/prepare-gamecenter-assets.py'
+      - '.github/workflows/prepare-gamecenter-assets.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: prepare-gamecenter-artwork
+  cancel-in-progress: false
+jobs:
+  artwork:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install artwork tools
+        run: python -m pip install Pillow CairoSVG requests PyJWT cryptography
+      - name: Export and validate icon and 47 images
+        run: |
+          python scripts/prepare-gamecenter-assets.py
+          python scripts/gc-sync.py --validate-only
+          python tests/gamecenter-sync-test.py
+      - name: Commit generated assets without starting iOS builds
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- assets/gamecenter/images ios/ConfusedSketch/Assets.xcassets/AppIcon.appiconset/AppIcon.png
+          if ! git diff --cached --quiet; then
+            git commit -m 'Add approved white-paper app icon and 47 Game Center images [skip ci]'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+      - name: Save artwork preview
+        uses: actions/upload-artifact@v4
+        with:
+          name: confused-sketch-gamecenter-artwork
+          path: |
+            assets/gamecenter/images
+            ios/ConfusedSketch/Assets.xcassets/AppIcon.appiconset/AppIcon.png
+
+  audit-apple:
+    needs: artwork
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment: testflight
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install Pillow requests PyJWT cryptography
+      - name: Read-only inventory of Game Center on Apple
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+          ASC_KEY_P8_BASE64: ${{ secrets.ASC_KEY_P8_BASE64 }}
+          GC_REPORT_PATH: gamecenter-apple-audit.json
+        run: |
+          umask 077
+          export ASC_KEY_PATH="$RUNNER_TEMP/gamecenter-audit.p8"
+          trap 'rm -f "$ASC_KEY_PATH"' EXIT
+          printf '%s' "$ASC_KEY_P8_BASE64" | base64 --decode > "$ASC_KEY_PATH"
+          python scripts/gc-sync.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: gamecenter-apple-audit
+          path: gamecenter-apple-audit.json
+          if-no-files-found: ignore
