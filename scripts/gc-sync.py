@@ -129,13 +129,23 @@ class Sync:
         if os.environ.get('GC_REPORT_PATH'):
             Path(os.environ['GC_REPORT_PATH']).write_text(json.dumps({'apply':self.apply,'images_ready':self.ready,'expected_localized_images':282,'new_uploads':self.uploaded},indent=2)+'\n')
 
+def gamecenter_detail(client,app_id,apply):
+    detail=client.optional(f'/v1/apps/{app_id}/gameCenterDetail')
+    if detail or not apply:return detail
+    # Enable the missing app-level detail only during an explicit --apply run.
+    return client.request('POST','/v1/gameCenterDetails',json={'data':{'type':'gameCenterDetails','relationships':{'app':{'data':{'type':'apps','id':app_id}}}}})['data']
+
 def main():
     p=argparse.ArgumentParser();p.add_argument('--apply',action='store_true');p.add_argument('--validate-only',action='store_true');args=p.parse_args()
     d=validate()
     if args.validate_only:return
     c=Client();apps=c.listing('/v1/apps?filter[bundleId]=com.confusedbyme.confusedsketch&limit=2')
     if len(apps)!=1:raise RuntimeError('Expected one Confused Sketch app accessible to the API key')
-    detail=c.optional(f'/v1/apps/{apps[0]["id"]}/gameCenterDetail')
-    if not detail:raise RuntimeError('Enable Game Center for this app in App Store Connect first')
+    detail=gamecenter_detail(c,apps[0]['id'],args.apply)
+    if not detail:
+        report={'apply':False,'gamecenter_enabled':False,'images_ready':0,'expected_localized_images':282,'new_uploads':0,'next_action':'Run Game Center sync with apply=true to enable and populate Game Center'}
+        print(json.dumps(report,indent=2))
+        if os.environ.get('GC_REPORT_PATH'):Path(os.environ['GC_REPORT_PATH']).write_text(json.dumps(report,indent=2)+'\n')
+        return
     Sync(c,args.apply).run(detail['id'],d)
 if __name__=='__main__':main()
