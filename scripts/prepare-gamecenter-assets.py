@@ -47,7 +47,8 @@ def artwork(item,board,index):
 def main():
     defs=json.loads((ROOT/'assets/gamecenter/definitions.json').read_text());OUT.mkdir(parents=True,exist_ok=True)
     assert len(defs['achievements'])==44 and sum(a['points'] for a in defs['achievements'])==945 and len(defs['leaderboards'])==3
-    raw=base64.b64decode((ROOT/'assets/branding/app-icon-white-paper.webp.base64').read_text(),validate=False)
+    encoded=''.join((ROOT/('assets/branding/'+name)).read_text().strip() for name in ['app-icon-white-paper.webp.base64','app-icon-white-paper.webp.base64.part2'])
+    raw=base64.b64decode(encoded,validate=True)
     assert hashlib.sha256(raw).hexdigest()=='306b94a045708024dedfe3915339ad5ac1ec76e313a033d34421904af4ea99d0','Approved icon source changed'
     icon=Image.open(io.BytesIO(raw)).convert('RGB');assert icon.size==(1024,1024)
     icon.save(ROOT/'ios/ConfusedSketch/Assets.xcassets/AppIcon.appiconset/AppIcon.png',dpi=(72,72))
