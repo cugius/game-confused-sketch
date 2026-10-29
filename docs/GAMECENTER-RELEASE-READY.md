@@ -20,7 +20,7 @@ python scripts/gc-sync.py --validate-only
 python tests/gamecenter-sync-test.py
 ```
 
-The **Prepare Game Center artwork** workflow exports and commits generated files using `[skip ci]`. Its preparation commit uses `[assets only]` so the simulator job is skipped. It does not use Apple credentials or launch an iOS build. Future normal Claude commits retain the existing simulator behavior.
+The **Prepare Game Center artwork** workflow exports and commits generated files using `[skip ci]`. Its preparation commit uses `[assets only]` so the simulator job is skipped. It does not launch an iOS build. After committing the files, a separate audit job uses the existing `testflight` credentials strictly for a read-only inventory on Apple and saves `gamecenter-apple-audit.json`. It never applies remote changes. Future normal Claude commits retain the existing simulator behavior.
 
 ## Apple synchronization
 
