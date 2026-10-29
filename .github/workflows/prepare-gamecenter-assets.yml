@@ -3,7 +3,7 @@ on:
   push:
     branches: [main]
     paths:
-      - 'assets/branding/app-icon-white-paper.webp.base64'
+      - 'assets/branding/app-icon-white-paper.webp.base64*'
       - 'assets/gamecenter/definitions.json'
       - 'scripts/prepare-gamecenter-assets.py'
       - '.github/workflows/prepare-gamecenter-assets.yml'
