@@ -314,3 +314,18 @@ body.home .home-head .home-side:last-child{right:max(24px,var(--safe-right))!imp
 .hud .metric:last-child{align-self:flex-start!important;flex:0 0 auto!important;min-width:84px}
 .lab-chips{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));overflow:visible!important;margin:0!important}
 .lab-chips button{flex:none!important;min-width:0;white-space:normal!important;line-height:1.15;min-height:40px!important}
+/*v0.74 HUD: tre colonne uguali, stessa grandezza dei numeri, barre della stessa larghezza (grafite, scintilla, livello)*/
+.hud{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:14px;align-items:start}
+.hud .metric,.hud .metric:first-child,.hud .metric:nth-child(2),.hud .metric:last-child{flex:none!important;min-width:0!important;align-self:start!important}
+.hud .metric:nth-child(1){text-align:left}
+.hud .metric:nth-child(2){text-align:center}
+.hud .metric:nth-child(3){text-align:right}
+.hud .metric>span:first-child{display:block;font-size:9px!important;letter-spacing:1.2px!important;line-height:12px;white-space:nowrap}
+.hud .metric>b{display:block;font-size:21px!important;letter-spacing:-.6px;line-height:26px;white-space:nowrap}
+.hud .metric:last-child #xpValue{display:inline!important}
+.hud .metric:last-child>.thin{display:block!important}
+.hud .metric .thin{width:100%!important;max-width:none!important;margin:3px 0 0!important}
+.hud .metric>small{display:inline}
+.hud .metric>b{display:inline-block!important;height:26px;vertical-align:baseline}
+.hud .metric b small,.hud .metric>small{font-size:11px;line-height:1}
+.hud .metric>.thin{display:block!important}
