@@ -301,3 +301,16 @@ body.home .home-head{margin-top:calc(var(--safe-top) + 4px)!important}
 body.home .home-head .home-side{top:20px!important;width:40px!important;height:40px!important}
 body.home .home-head .home-side:first-child{left:max(24px,var(--safe-left))!important}
 body.home .home-head .home-side:last-child{right:max(24px,var(--safe-right))!important}
+/*v0.73: HUD allineata (le voci nascoste non occupano spazio), schede del Laboratorio visibili a capo*/
+.hud .metric>[hidden]{display:none!important}
+.hud{align-items:flex-start}
+.metric{min-width:0}
+.metric:nth-child(2){text-align:center}
+.metric:nth-child(3){text-align:right}
+.metric:nth-child(3) .thin{margin-left:auto}
+.metric:nth-child(2) .thin{margin-inline:auto}
+.lab-tabs{flex-wrap:wrap}
+.lab-tabs button{flex:1 1 calc(33.333% - 5px);min-width:0}
+.hud .metric:last-child{align-self:flex-start!important;flex:0 0 auto!important;min-width:84px}
+.lab-chips{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));overflow:visible!important;margin:0!important}
+.lab-chips button{flex:none!important;min-width:0;white-space:normal!important;line-height:1.15;min-height:40px!important}
