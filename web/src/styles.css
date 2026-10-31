@@ -345,3 +345,5 @@ body.home .home-head .home-side:last-child{right:max(24px,var(--safe-right))!imp
 .sc-row b{font-family:var(--hand);font-size:24px;color:#2d3f5e;font-weight:700;white-space:nowrap}
 .sc-best{margin-top:8px;text-align:center;font-family:var(--hand);font-size:20px;color:#4f6f60}
 .share-btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;margin-bottom:10px}
+/*v0.80 HUD: barra del livello visibile e centrata sotto il numero, stessa larghezza delle altre due*/
+.hud .metric:last-child>.thin{display:block!important;margin:3px auto 0!important}
